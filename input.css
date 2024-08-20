@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.indicator{
+    transition: left .4s;
+  }
+
+  .fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+}

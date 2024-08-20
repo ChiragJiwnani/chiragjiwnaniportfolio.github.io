@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="font.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <script src="animation.js"></script>
+    <script src="typewriter.js"></script>
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+</head>
+
+<body class="bg-gradient-to-r from-[#444343] to-[#141313] text-white font-['Nunito'] w-[100%] body ">
+    <section id="Home" class="flex flex-col justify-between h-screen ">
+
+
+        <header class="sticky z-20 flex items-center  justify-between px-4 mt-4 max-w-screen-xl">
+            <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="48" stroke="white" stroke-width="4" fill="transparent" />
+                <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="60" fill="white"
+                    font-family="Arial, sans-serif">
+                    C
+                </text>
+            </svg>
+            <div class="mx-5 flex gap-5 ">
+                <svg id="dark-light" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-sun">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="hidden">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <a href="tel:+91-8182831488">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-phone">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                        </path>
+                    </svg>
+                </a>
+                <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="whatsapp"
+                    class="svg-inline--fa fa-whatsapp fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 448 512">
+                    <path fill="currentColor"
+                        d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z">
+                    </path>
+                </svg>
+            </div>
+        </header>
+        <video class="absolute  bg-cover opacity-75 max-h-screen" autoplay loop muted
+            src="./assets/bg.mp4"></video>
+        <div class="-mt-16 flex relative fadein">
+            <div class="relative max-w-screen-xl mx-auto w-full px-4">
+                <div class=" relative ml-4 md:ml-12">
+                    <h1 class=" text-[6rem]
+                    font-extrabold font-lato md:text-10xl mr-12
+                    sm: text-[4rem] leading-normal m-4" data-aos="fade-right" data-aos-duration="1000">Chirag Jiwnani
+                    </h1>
+                    <p id="typing-text"
+                        class="pr-5 w-1/2 animate-typing font-merriweather italic text-2xl md: my-8 overflow-hidden whitespace-nowrap border-r-4 border-r-white text-white font-bold sm: text-2xl m-4"
+                        data-aos="fade-right" data-aos-duration="1000">
+                        Student | Freelancer
+                    </p>
+
+                    <button class="text-lg py-2 px-5 rounded font-extrabold bg-gradient-to-r from-[#500724] to-[#083344]
+                        relative hover:scale-110 ease-in-out duration-300 group mb-[50px] shadow-lg shadow-black ">
+                        <a href="./assets/CV.pdf" target="_blank" download="">Download CV </a>
+                    </button>
+                </div>
+
+            </div>
+            <ul class="mx-4 space-y-6 bg-[#030303] p-3 rounded-lg text-[#b0b2c3] absolute right-6 top-[82%] shadow drop-shadow-2xl shadow-white"
+                data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <li>
+                    <a href="https://www.linkedin.com/in/chirag-jiwnani/" target="_blank">
+                        <svg class="w-7 hover:text-white shadow shadow-2xl shadow-white"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor"
+                                d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <svg class="w-7 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                                d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <svg class="w-7 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor"
+                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:chiragworks005@gmail.com" target="_blank">
+                        <svg class="w-7 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                                d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/chiragjiwnani">
+                        <svg class="w-7 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                            <path fill="currentColor"
+                                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="relative self-center">
+            <button class="text-lg py-2 px-5 rounded font-extrabold bg-gradient-to-r  from-[#500724] to-[#083344]
+        relative hover:scale-110 ease-in-out duration-300 group mb-[50px]  shadow shadow-lg shadow-black ">
+                <a href="#About">About Me</a>
+
+            </button>
+        </div>
+    </section>
+
+    <section id="About" class="h-auto border-pink-600 border-t-8 ">
+        <div class="w-auto ">
+            <div class="  my-4
+            md: my-4
+            sm: my-3">
+                <h1 class="bg-slate-950 font-lato rounded-b-full text-white justify-center flex fade-in text-[3rem] mt-[3rem]
+                sm: text-[2rem]" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    About Me
+                </h1>
+            </div>
+            <div class="flex flex-row w-auto justify-evenly sm: flex-wrap">
+                <div class="lg: w-[45rem]
+                sm: w-[25rem] m-6">
+                    <p class=" mx-auto text-2xl h-auto md: text-2xl p-2 sm:w-auto text-lg p-2" data-aos="fade-up"
+                        data-aos-duration="1000" data-aos-delay="400">
+                        I am pursuing my bachelor's in Artificial Intelligence and Machine Learning and at Dwarkadas J.
+                        Sanghvi College of Engineering. I have a lot of enthusiasm for Artificial intelligence and Data
+                        Science. I'm highly interested in
+                        working as
+                        an intern in these fields.I had the chance to work as an AI intern at Inventrom Pvt. Ltd. while
+                        I was pursuing my degree. I have worked on multiple projects like Anti- Procastination Specs, AI
+                        Custom recipe maker, Youtube clone, etc. Along with my technical abilities, I also possess:
+                    </p>
+                    <div class="mx-8 w-auto 
+                    lg: text-xl p-2
+                    sm: text-md font-extrabold" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                        <ol>
+                            <li class="list-disc"> Strong Communication Skills</li>
+                            <li class="list-disc"> Problem-Solving-Skills</li>
+                            <li class="list-disc"> On Time Project Delivery</li>
+                            <li class="list-disc"> Collaboration Skills</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class=" p-4 flex w-1/2 justify-center max-w-[30rem]" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="400">
+                    <img class="border-cyan-600 border-8 rounded-3xl w-auto md: w-[20rem] h-[20rem]" src="./assets/images/about.png" alt="">
+                </div>
+            </div>
+            <div class="flex relative justify-center self-center 
+               lg: m-[9rem]
+                sm: m-[4rem] " data-aos="fade-up" data-aos-duration="1000">
+
+                <button class="flex rounded font-extrabold bg-gradient-to-r from-[#500724] to-[#083344]
+        relative hover:scale-110 ease-in-out duration-300 group after:content-['']
+        lg: py-2 px-5 shadow-lg shadow-black">
+                    <a href="#Skills">Skill And Experience</a>
+
+                </button>
+            </div>
+        </div>
+        </div>
+    </section>
+   
+    <section id="Skills" class="h-auto w-[100%]">
+        <div class="">
+            <div class="">
+                <h1 class="bg-slate-950 font-lato rounded-b-full text-white justify-center flex fade-in lg: text-[3rem] mt-[3rem]
+                sm: text-[2rem]" data-aos="fade-up" data-aos-duration="1000">
+                    Skills and Experience
+                </h1>
+            </div>
+            <div class="flex flex-row ">
+                <div class="w-auto">
+                    <p class="lg:text-xl h-auto text-wrap 
+            md:text-xl m-6 px-16 py-8 ml-10 
+            sm:text-lg m-2 flex-wrap " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        I am passionate about continuous learning, staying up-to-date with the latest trends and
+                        techniques in data science, and seeking opportunities to apply new skills and knowledge to solve
+                        real-world problems.
+                    </p>
+                    <div class="flex flex-col w-[100%] text-lg p-2 my-6 justify-center
+                ">
+                        <div role="tablist" aria-label="tabs"
+                            class="flex relative justify-center w-auto mx-[9%] h-10 grid grid-cols-2 items-center px-[3px] rounded-full bg-[#3c3c3c]  shadow-2xl shadow-900/20 transition shadow shadow-md shadow-black "
+                            data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                            <div
+                                class="absolute indicator h-9 w-[50%] my-auto rounded-full bg-gradient-to-r from-[#500724] to-[#083344] shadow-sm shadow-black">
+                            </div>
+                            <button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0"
+                                class="relative block h-11 px-4 tab rounded-full">
+                                <span class="text-white font-bold">Skills</span>
+                            </button>
+                            <button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1"
+                                class="relative block h-10 px-4 tab rounded-full">
+                                <span class="text-white font-bold">Experience</span>
+                            </button>
+
+                        </div>
+                        <div class="mt-6 relative rounded-3xl bg-[#3c3c3c] justify-center flex shadow-md shadow-black max-w-fit mx-auto w-[100%]]"
+                            data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                            <div role="tabpanel" id="panel-1"
+                                class=" flex tab-panel py-6 transition duration-300 w-auto justify-center mx-auto ">
+                                <div id="skillsContent" class="flex justify-around flex-wrap">
+                                    <div class="px-10 w-[25rem] list-none text-lg font-extrabold justify-center sm:">
+                                        <div class="my-10 flex flex-col">
+                                            <div class="flex justify-between ">
+                                                <h1>Python</h1>
+                                                <h1>95%</h1>
+                                            </div>
+                                            <div class="transition duration-3000 bg-sky-500 border border-sky-950 h-2 rounded-full shadow drop-shadow-xl shadow-black hover:"
+                                                role="progressbar" aria-valuenow="95" aria-valuemin="0"
+                                                aria-valuemax="100" style="width: 95%;"></div>
+                                        </div>
+                                        <div class=" my-10 flex flex-col">
+                                            <div class="flex justify-between ">
+                                                <h1>Machine Learning</h1>
+                                                <h1>80%</h1>
+                                            </div>
+                                            <div class="transition duration-3000 bg-lime-400 border border-lime-950 h-2 rounded-full shadow drop-shadow-xl shadow-black"
+                                                role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                                                aria-valuemax="100" style="width: 80%;"></div>
+                                        </div>
+                                        <div class="mt-10 flex flex-col justify-center">
+                                            <div class="flex justify-between ">
+                                                <h1>Data Analysis</h1>
+                                                <h1>85%</h1>
+                                            </div>
+                                            <div class="transition duration-3000 bg-pink-400 border border-pink-950 rounded-full h-2 shadow drop-shadow-xl shadow-black"
+                                                role="progressbar" aria-valuenow="85" aria-valuemin="0"
+                                                aria-valuemax="100" style="width: 85%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="px-10 font-extrabold text-lg mt-10 w-[25rem]">
+                                        <div class="flex flex-col">
+                                            <div class="flex justify-between">
+                                                <h1>Data Visualisation</h1>
+                                                <h1>95%</h1>
+                                            </div>
+                                            <div class="transition duration-3000 bg-red-600 border border-red-950 rounded-full h-2 shadow drop-shadow-xl shadow-black"
+                                                role="progressbar" aria-valuenow="95" aria-valuemin="0"
+                                                aria-valuemax="100" style="width: 95%;"></div>
+                                        </div>
+                                        <div class="my-10 flex flex-col">
+                                            <div class="flex justify-between">
+                                                <h1>Web Development</h1>
+                                                <h1>90%</h1>
+                                            </div>
+                                            <div class="transition duration-3000 bg-black rounded-full h-2 shadow drop-shadow-xl shadow-black"
+                                                role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                                aria-valuemax="100" style="width: 90%;"></div>
+                                        </div>
+                                        <div class=" my-10 flex flex-col">
+                                            <div class="flex justify-between">
+                                                <h1>MongoDB, MySQL</h1>
+                                                <h1>85%</h1>
+                                            </div>
+                                            <div class="transition duration-3000 border border-blue-950 bg-blue-900 rounded-full h-2 shadow drop-shadow-xl shadow-black"
+                                                role="progressbar" aria-valuenow="85" aria-valuemin="0"
+                                                aria-valuemax="100" style="width: 85%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" id="panel-2"
+                                class="absolute top-0 invisible opacity-0 tab-panel p-2 transition duration-300 w-auto my-1/2">
+                                <div id="experienceContent" class="relative flex flex-wrap mx-23 my-[10%] gap-10">
+                                    <div class="mx-6">
+                                        <h1 class="py-4 text-3xl">Web Development Intern</h1>
+                                        <span>July 2024 - Present</span>
+                                        <h3>Nullclass</h3>
+
+                                    </div>
+                                    <div class="mx-6">
+                                        <h1 class="py-4 text-3xl">AI Intern</h1>
+                                        <span>Nov 2023 - Dec 2023</span>
+                                        <h3>Inventrom Pvt. Ltd.</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+        <div class="flex relative justify-center self-center 
+            lg:mt-[3rem]
+            md:mt-[2rem]" data-aos="fade-up" data-aos-duration="1000">
+
+            <button class="flex py-2 px-5 rounded font-extrabold bg-gradient-to-r from-[#500724] to-[#083344]
+    relative hover:scale-110 ease-in-out duration-300 group after:content-[''] shadow-lg shadow-black ">
+                <a href="#Certificates">
+                    My Certifications
+                </a>
+            </button>
+        </div>
+        </div>
+        </div>
+    </section>
+   
+    <section id="Certificates" class="h-auto ">
+        <div class="">
+            <div class="lg: my-25
+            md: my-15
+            sm: my-3">
+                <h1 class="bg-slate-950  rounded-b-full text-white font-lato justify-center flex fade-in text-[3rem] mt-[3rem]
+                sm: text-[2rem]" data-aos="fade-up" data-aos-duration="1000">
+                    My Certifications
+                </h1>
+            </div>
+            <div class="flex h-auto justify-center flex-wrap">
+                <div class="flex justify-center items-center flex-wrap" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="200">
+                    <div class="flex items-center bg-[#2f2e2e] rounded-2xl shadow shadow-4xl shadow-black w-[25rem]
+                    hover:scale-[102%] ease-in-out duration-300
+                    lg: text-lg m-2 p-2
+                    sm: text-[0.9rem]">
+
+                        <svg class="my-2 mx-6" width="50px" height="120px" viewBox="-3 0 262 262"
+                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+                            <path
+                                d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"
+                                fill="#4285F4" />
+                            <path
+                                d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"
+                                fill="#34A853" />
+                            <path
+                                d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782"
+                                fill="#FBBC05" />
+                            <path
+                                d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"
+                                fill="#EB4335" />
+                        </svg>
+                        Google<a class="flex text-center"
+                            href="https://www.cloudskillsboost.google/public_profiles/734410b0-6824-44ea-8437-d42e653f0f55/badges/4976311">&nbsp;-&nbsp;Generative
+                            AI,&nbsp; </a> <a
+                            href="https://www.cloudskillsboost.google/public_profiles/734410b0-6824-44ea-8437-d42e653f0f55/badges/4980461">
+                            Resposible AI,&nbsp; </a> <a
+                            href="https://www.cloudskillsboost.google/public_profiles/734410b0-6824-44ea-8437-d42e653f0f55/badges/4976862">LLM</a>
+
+                    </div>
+                    <div class=" flex  items-center  bg-[#2f2e2e] rounded-2xl shadow shadow-4xl shadow-black 
+                    hover:scale-[102%] ease-in-out duration-300 w-[25rem]
+                    lg: text-xl m-2 p-2
+                    sm: text-[0.9rem]">
+                        <svg class="my-2 mx-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 235.44 231.12" id="tata"
+                            width="100" height="120">
+                            <polygon fill="#2f2e2e" fill-rule="evenodd"
+                                points="12.28 24.08 205.04 24.08 205.04 216.84 12.28 216.84 12.28 24.08 12.28 24.08">
+                            </polygon>
+                            <polygon fill="#2e3192" fill-rule="evenodd"
+                                points="23.8 152.99 60.38 152.99 60.38 163.84 48.99 163.84 48.99 195.78 35.2 195.78 35.2 163.84 23.8 163.84 23.8 152.99 23.8 152.99">
+                            </polygon>
+                            <polygon fill="#2e3192" fill-rule="evenodd"
+                                points="107.76 152.99 144.34 152.99 144.34 163.84 132.94 163.84 132.94 195.78 119.15 195.78 119.15 163.84 107.76 163.84 107.76 152.99 107.76 152.99">
+                            </polygon>
+                            <polygon fill="#2e3192" fill-rule="evenodd"
+                                points="59.18 195.78 74.78 152.99 92.17 152.99 109.56 195.78 93.97 195.78 84.37 168.06 74.18 195.78 59.18 195.78 59.18 195.78">
+                            </polygon>
+                            <polygon fill="#2e3192" fill-rule="evenodd"
+                                points="143.14 195.78 158.73 152.99 176.12 152.99 193.51 195.78 177.92 195.78 168.33 168.06 158.13 195.78 143.14 195.78 143.14 195.78">
+                            </polygon>
+                            <path fill="#2e3192" fill-rule="evenodd"
+                                d="M107,42.65c27.78,0,51.76,11.62,62.3,28.19-15.87-4.34-34.24-7.69-53.31-7.05-3,.1-5.4.89-5.4,3.76v69.11c-1.19,0-2.39.07-3.59.07s-2.3,0-3.44-.06V67.55c0-2.87-2.35-3.66-5.4-3.76-19.15-.64-37.59,2.73-53.5,7.1C55.19,54.29,79.19,42.65,107,42.65Zm66.91,38.56A32.94,32.94,0,0,1,175,89.69c0,20.39-18.94,37.83-45.28,44.32L122,81.87c-.64-4.24-.6-7.12,3-7.23C145.22,74,157.1,77,173.91,81.21Zm-89.5,52.84C58,127.58,39,110.12,39,89.69a32.69,32.69,0,0,1,1.11-8.44C57,77.05,68.86,74,89.17,74.64c3.61.11,3.65,3,3,7.23l-7.77,52.18Z">
+                            </path>
+                        </svg>
+                        <a href="./assets/images/TATA forage.pdf" target="_blank">
+                            TATA - Data Visualisation: Empowering Business with Effective Insights
+                        </a>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-center items-center flex-wrap 
+                " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <div class=" flex items-center bg-[#2f2e2e] rounded-2xl shadow shadow-4xl shadow-black
+                    hover:scale-[102%] ease-in-out duration-300 w-[25rem]
+                    lg:text-xl m-2 p-2
+                    sm: text-[0.9rem]">
+
+                        <svg class="my-2 mx-6" width="140px" height="120px" viewBox="0 -406.53 1033.746 1033.746"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1033.746 99.838v-18.18h-22.576V53.395l-.76.234-21.205 6.488-.418.127v21.415h-33.469v-11.93c0-5.555 1.242-9.806 3.69-12.641 2.431-2.801 5.908-4.225 10.343-4.225 3.188 0 6.489.751 9.811 2.232l.833.372V36.321l-.392-.144c-3.099-1.114-7.314-1.675-12.539-1.675-6.585 0-12.568 1.433-17.786 4.273-5.221 2.844-9.328 6.904-12.205 12.066-2.867 5.156-4.322 11.111-4.322 17.701v13.116h-15.72v18.18h15.72v76.589h22.567V99.838h33.469v48.671c0 20.045 9.455 30.203 28.102 30.203 3.064 0 6.289-.359 9.582-1.062 3.352-.722 5.635-1.443 6.979-2.213l.297-.176v-18.348l-.918.607c-1.225.816-2.75 1.483-4.538 1.979-1.796.505-3.296.758-4.458.758-4.368 0-7.6-1.177-9.605-3.5-2.028-2.344-3.057-6.443-3.057-12.177V99.838h22.575zM866.635 160.26c-8.191 0-14.649-2.716-19.2-8.066-4.579-5.377-6.899-13.043-6.899-22.783 0-10.049 2.32-17.914 6.901-23.386 4.554-5.436 10.95-8.195 19.014-8.195 7.825 0 14.054 2.635 18.516 7.836 4.484 5.228 6.76 13.03 6.76 23.196 0 10.291-2.14 18.196-6.36 23.484-4.191 5.248-10.493 7.914-18.732 7.914m1.003-80.885c-15.627 0-28.039 4.579-36.889 13.61-8.844 9.032-13.328 21.531-13.328 37.153 0 14.838 4.377 26.773 13.011 35.468 8.634 8.698 20.384 13.104 34.921 13.104 15.148 0 27.313-4.643 36.159-13.799 8.845-9.146 13.326-21.527 13.326-36.784 0-15.07-4.205-27.094-12.502-35.731-8.301-8.641-19.977-13.021-34.698-13.021m-86.602 0c-10.63 0-19.423 2.719-26.14 8.08-6.758 5.393-10.186 12.466-10.186 21.025 0 4.449.74 8.401 2.196 11.753 1.465 3.363 3.732 6.324 6.744 8.809 2.989 2.465 7.603 5.047 13.717 7.674 5.14 2.115 8.973 3.904 11.408 5.314 2.38 1.382 4.069 2.771 5.023 4.124.927 1.324 1.397 3.136 1.397 5.372 0 6.367-4.768 9.465-14.579 9.465-3.639 0-7.79-.76-12.337-2.258a46.347 46.347 0 0 1-12.634-6.406l-.937-.672v21.727l.344.16c3.193 1.474 7.219 2.717 11.964 3.695 4.736.979 9.039 1.477 12.777 1.477 11.535 0 20.824-2.732 27.602-8.125 6.821-5.43 10.278-12.67 10.278-21.525 0-6.388-1.861-11.866-5.529-16.284-3.643-4.382-9.966-8.405-18.785-11.961-7.026-2.82-11.527-5.161-13.384-6.958-1.79-1.736-2.699-4.191-2.699-7.3 0-2.756 1.122-4.964 3.425-6.752 2.321-1.797 5.552-2.711 9.604-2.711 3.76 0 7.607.594 11.433 1.758 3.823 1.164 7.181 2.723 9.984 4.63l.922.63v-20.61l-.354-.152c-2.586-1.109-5.996-2.058-10.138-2.828-4.123-.765-7.863-1.151-11.116-1.151m-95.157 80.885c-8.189 0-14.649-2.716-19.199-8.066-4.58-5.377-6.896-13.041-6.896-22.783 0-10.049 2.319-17.914 6.901-23.386 4.55-5.436 10.945-8.195 19.013-8.195 7.822 0 14.051 2.635 18.514 7.836 4.485 5.228 6.76 13.03 6.76 23.196 0 10.291-2.141 18.196-6.361 23.484-4.191 5.248-10.49 7.914-18.732 7.914m1.006-80.885c-15.631 0-28.044 4.579-36.889 13.61-8.844 9.032-13.331 21.531-13.331 37.153 0 14.844 4.38 26.773 13.014 35.468 8.634 8.698 20.383 13.104 34.92 13.104 15.146 0 27.314-4.643 36.16-13.799 8.843-9.146 13.326-21.527 13.326-36.784 0-15.07-4.206-27.094-12.505-35.731-8.303-8.641-19.977-13.021-34.695-13.021M602.409 98.07V81.658h-22.292v94.767h22.292v-48.477c0-8.243 1.869-15.015 5.557-20.13 3.641-5.054 8.493-7.615 14.417-7.615 2.008 0 4.262.331 6.703.986 2.416.651 4.166 1.358 5.198 2.102l.937.679V81.496l-.361-.155c-2.076-.882-5.013-1.327-8.729-1.327-5.602 0-10.615 1.8-14.909 5.344-3.769 3.115-6.493 7.386-8.576 12.712h-.237zm-62.213-18.695c-10.227 0-19.349 2.193-27.108 6.516-7.775 4.333-13.788 10.519-17.879 18.385-4.073 7.847-6.141 17.013-6.141 27.235 0 8.954 2.005 17.171 5.968 24.413 3.965 7.254 9.577 12.929 16.681 16.865 7.094 3.931 15.293 5.924 24.371 5.924 10.594 0 19.639-2.118 26.891-6.295l.293-.168v-20.423l-.937.684c-3.285 2.393-6.956 4.303-10.906 5.679-3.94 1.375-7.532 2.07-10.682 2.07-8.747 0-15.769-2.737-20.866-8.133-5.108-5.403-7.698-12.99-7.698-22.537 0-9.607 2.701-17.389 8.024-23.131 5.307-5.725 12.342-8.629 20.908-8.629 7.327 0 14.467 2.481 21.222 7.381l.935.679V84.371l-.302-.17c-2.542-1.423-6.009-2.598-10.313-3.489-4.286-.889-8.478-1.337-12.461-1.337m-66.481 2.284h-22.292v94.766h22.292V81.659zm-10.918-40.371c-3.669 0-6.869 1.249-9.498 3.724-2.64 2.482-3.979 5.607-3.979 9.295 0 3.63 1.323 6.698 3.938 9.114 2.598 2.409 5.808 3.63 9.54 3.63 3.731 0 6.953-1.221 9.582-3.626 2.646-2.42 3.988-5.487 3.988-9.118 0-3.559-1.306-6.652-3.879-9.195-2.571-2.538-5.833-3.824-9.692-3.824m-55.62 33.379v101.758h22.75V44.189H398.44l-40.022 98.221-38.839-98.221H286.81v132.235h21.379V74.657h.734l41.013 101.768h16.134l40.373-101.758h.734z"
+                                fill="#706d6e" />
+                            <path d="M104.868 104.868H0V0h104.868v104.868z" fill="#f1511b" />
+                            <path d="M220.654 104.868H115.788V0h104.866v104.868z" fill="#80cc28" />
+                            <path d="M104.865 220.695H0V115.828h104.865v104.867z" fill="#00adef" />
+                            <path d="M220.654 220.695H115.788V115.828h104.866v104.867z" fill="#fbbc09" />
+                        </svg>
+                        <a href="./assets/images/Microsoft Azure Fundamentals.pdf" target="_blank">
+                            Microsoft Azure Fundamentals
+                        </a>
+
+                    </div>
+                    <div class="flex  items-center  bg-[#2f2e2e] rounded-2xl shadow shadow-4xl shadow-black
+                    hover:scale-[102%] ease-in-out duration-300 w-[25rem]
+                    lg:text-xl m-2 p-2
+                    sm: text-[0.9rem]">
+
+                        <svg class="my-2 mx-6" width="100px" height="120px" viewBox="0 -222.5 512 512"
+                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+                            <path
+                                d="M221.034 43.303h33.832l-17.889-28.781-32.833 52.037h-14.942l39.935-62.508c1.736-2.525 4.63-4.051 7.84-4.051 3.104 0 5.998 1.473 7.682 3.946l40.093 62.613H269.81l-7.05-11.628h-34.253l-7.472-11.628zM376.251 54.93V.631h-12.68v59.614c0 1.631.631 3.21 1.841 4.42s2.841 1.894 4.63 1.894h57.825l7.472-11.628H376.25zm-209.78-9.734c12.313 0 22.31-9.944 22.31-22.256 0-12.313-9.997-22.31-22.31-22.31h-55.473V66.56h12.676v-54.3h41.956c5.893 0 10.628 4.789 10.628 10.682 0 5.892-4.735 10.68-10.628 10.68l-35.747-.052 37.851 32.99h18.416l-25.466-21.362h5.788zM32.97 66.559C14.77 66.56 0 51.827 0 33.622 0 15.416 14.77.632 32.97.632h38.32c18.204 0 32.963 14.784 32.963 32.99 0 18.205-14.759 32.937-32.964 32.937H32.97zm37.468-11.628c11.791 0 21.341-9.524 21.341-21.31 0-11.785-9.55-21.361-21.341-21.361h-36.62c-11.787 0-21.342 9.576-21.342 21.362 0 11.785 9.555 21.309 21.341 21.309h36.62zm240.78 11.628c-18.204 0-32.99-14.732-32.99-32.937 0-18.206 14.786-32.99 32.99-32.99h45.514l-7.42 11.628H312.06c-11.786 0-21.362 9.576-21.362 21.362 0 11.785 9.576 21.309 21.362 21.309h45.723l-7.472 11.628h-39.093zm155.06-11.628c-9.734 0-17.995-6.524-20.52-15.522h54.194l7.471-11.628h-61.665c2.525-8.945 10.786-15.521 20.52-15.521h37.2L511 .63h-45.565c-18.205 0-32.99 14.785-32.99 32.99 0 18.206 14.785 32.938 32.99 32.938h39.094L512 54.931h-45.723z"
+                                fill="#EA1B22" />
+                        </svg>
+                        <a href="./assets/images/Oracle eCertificate.pdf" target="_blank">
+                            Oracle Cloud Infrastructure Generative AI Certified Professional
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex relative justify-center self-center
+                 lg: m-[6%]
+                md: m-[14%]
+                sm: m-[20%]" data-aos="fade-up" data-aos-duration="1000">
+
+                <button class="flex rounded font-extrabold bg-gradient-to-r from-[#500724] to-[#083344]
+        relative hover:scale-110 ease-in-out duration-300 group after:content-['']
+        lg:py-2 px-5  shadow shadow-lg shadow-black">
+                    <a href="#Project">My Projects</a>
+
+                </button>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="Project" class=" h-auto">
+        <div class="lg: my-25
+            md: my-15
+            sm: my-3">
+            <h1 class="bg-slate-950 rounded-b-full text-white font-lato justify-center flex fade-in text-[3rem] mt-[3rem]
+            sm: text-[2rem]" data-aos="fade-up" data-aos-duration="1000">
+                My Projects
+            </h1>
+        </div>
+        <div class=" m-10  items-center ">
+            <div class="flex flex-wrap justify-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <a href="https://github.com/ChiragJiwnani/Custom-Recipe-Generator">
+                    <div class="p-4 m-6 flex justify-center bg-[#2f2e2e] rounded-2xl shadow shadow-4xl shadow-black w-[20rem] h-[12rem]
+                hover:scale-[102%] ease-in-out duration-300 
+                lg: text-xl  p-2
+                sm: text-lg  ">
+                        <img width="100%" height="60%" class="rounded-xl" src="./assets/images/recipe.png" alt="">
+
+                    </div>
+                </a>
+                <a href="https://github.com/ChiragJiwnani/Automatic-Fining-System">
+                    <div class="p-4 m-6 flex justify-center bg-[#2f2e2e] rounded-2xl shadow shadow-4xl shadow-black w-[20rem] h-[12rem]
+                hover:scale-[102%] ease-in-out duration-300
+                lg: text-xl m-2 p-2
+                sm: text-lg">
+                        <img width="100%" height="60%" class="rounded-xl" src="./assets/images/numberplate.jpg" alt="">
+
+                    </div>
+                </a>
+                <a href="https://github.com/ChiragJiwnani/News-Analysis">
+                    <div class="p-4 m-6 flex justify-center bg-[#2f2e2e] rounded-2xl shadow shadow-4xl shadow-black w-[20rem] h-[12rem]
+                hover:scale-[102%] ease-in-out duration-300
+                lg: text-xl m-2 p-2
+                sm: text-lg">
+                        <img width="100%" height="60%" class="rounded-xl" src="./assets/images/news.jpeg" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="flex flex-wrap justify-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <a href="https://github.com/ChiragJiwnani/Funngro-revamp">
+                    <div class="p-4 m-6 flex  justify-center bg-[#2f2e2e] rounded-2xl shadow shadow-4xl shadow-black w-[20rem] h-[12rem]
+                hover:scale-[102%] ease-in-out duration-300
+                lg: text-xl m-2 p-2
+                sm: text-lg">
+                        <img width="100%" height="80%" class="rounded-xl" src="./assets/images/funngro.png" alt="">
+
+                    </div>
+                </a>
+                <a href="https://github.com/ChiragJiwnani/Workforce-Analytics-Employee-Shift-Analysis">
+                    <div class="p-4 m-6 flex  justify-center  bg-[#2f2e2e] rounded-2xl shadow shadow-4xl shadow-black w-[20rem] h-[12rem]
+                hover:scale-[102%] ease-in-out duration-300
+                lg: text-xl m-2 p-2
+                sm: text-lg">
+                        <img width="100%" height="60%" class="rounded-xl" src="./assets/images/workforce.jpg" alt="">
+
+                    </div>
+                </a>
+                <a href="github.com">
+                    <div class="p-4 m-6 flex justify-center bg-[#2f2e2e] rounded-2xl shadow shadow-4xl shadow-black w-[20rem] h-[12rem]
+                hover:scale-[102%] ease-in-out duration-300
+                lg: text-xl m-2 p-2
+                sm: text-lg">
+                        <img width="100%" height="60%" class="rounded-xl" src="./assets/images/youtube.png" alt="">
+
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="flex relative justify-center self-center 
+                lg: mt-[6%] 
+                sm: mt-[20px]" data-aos="fade-up" data-aos-duration="1000">
+
+            <button class="flex bg-[blue] rounded font-extrabold bg-gradient-to-r from-[#500724] to-[#083344]
+        relative hover:scale-110 ease-in-out duration-300 group after:content-['']
+        lg: py-2 px-5 shadow shadow-lg shadow-black">
+                <a href="#Contact">Lets Work Together !!</a>
+
+            </button>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="Contact" class=" h-auto w-[100%]">
+        <div class="
+        md: my-15
+            sm: my-3">
+            <h1 class="bg-slate-950 rounded-b-full text-white font-lato justify-center flex fade-in text-[3rem] mt-[3rem]
+            sm: text-[2rem]" data-aos="fade-up" data-aos-duration="1000">
+                Contact Me
+            </h1>
+        </div>
+        <div class="flex flex-wrap justify-evenly" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div
+                class="flex flex-col mx-10 my-5 w-[35rem] bg-[#2f2e2e] rounded-3xl p-6 shadow drop-shadow-sm shadow-black">
+
+                <h4 class="text-lg my-4">My Address:</h4>
+                <h1 class="text-2xl">Platinum Tower 4 (Mumbai, Maharashtra)</h1>
+                <hr class="border-slate-700">
+                <h4 class="text-lg my-4">Mail me:</h4>
+                <h1 class="text-2xl">chiragworks005@gmail.com</h1>
+                <hr class="border-slate-700">
+                <h4 class="text-lg my-4">Call me:</h4>
+                <h1 class="text-2xl">+91 8182831488</h1>
+                <hr class="border-slate-700">
+                <h4 class="text-lg my-4">Follow me</h4>
+                <ul class="mx-2 space-x-5 flex text-[#b0b2c3] ">
+                    <li class="p-2 rounded-md shadow drop-shadow-xl shadow-black">
+                        <a href="https://www.linkedin.com/in/chirag-jiwnani/" target="_blank">
+
+
+                            <svg class="w-7 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path fill="currentColor"
+                                    d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="p-2 rounded-md shadow drop-shadow-xl shadow-black">
+                        <a href="">
+                            <svg class="w-7 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                    d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="p-2 rounded-md shadow drop-shadow-xl shadow-black">
+                        <a href="">
+                            <svg class="w-7 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path fill="currentColor"
+                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="p-2 rounded-md shadow drop-shadow-xl shadow-black">
+                        <a href="mailto:chiragworks005@gmail.com" target="_blank">
+                            <svg class="w-7 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                    d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="p-2 rounded-md shadow drop-shadow-xl shadow-black">
+                        <a href="https://github.com/chiragjiwnani">
+                            <svg class="w-7 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                                <path fill="currentColor"
+                                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="my-5 flex flex-col w-[25rem] h-auto">
+                <div class=" rounded-xl bg-gradient-to-r from-[#500724] to-[#083344] p-1 shadow-md shadow-black">
+                    <input class=" rounded-xl h-[10rem] w-[100%] p-6 bg-[#2f2e2e] " type="Message"
+                        placeholder="Message...">
+                </div>
+                <button class="">
+                    <div
+                        class="m-6 w-30 h-10 p-2 bg-gradient-to-r from-[#500724] to-[#083344] rounded-xl font-extrabold shadow-lg shadow-black">
+                        Send Message
+                    </div>
+                </button>
+            </div>
+    </section>
+
+    <a href="#">
+
+        <button
+            class="sticky h-12 w-12 rounded-full bg-[#020202] left-[94.5rem] bottom-8 z-99 my-6 mx-10 shadow drop-shadow-xl shadow-white">
+            top
+        </button>
+    </a>
+
+    <script src="skillcomponent.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
