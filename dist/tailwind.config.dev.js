@@ -2,7 +2,7 @@
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: "class",
+  darkMode: ["selector"],
   content: ["./index.html", "./test.html"],
   theme: {
     screens: {
@@ -1237,6 +1237,6 @@ module.exports = {
       wiggle: "wiggle 0.8s ease 0.25s 2"
     }
   },
-  plugins: []
+  plugins: [require('flowbite/plugin')]
 };
 //# sourceMappingURL=tailwind.config.dev.js.map
