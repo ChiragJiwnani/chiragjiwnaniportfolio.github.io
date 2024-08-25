@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth ">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="font.css">
-    <link rel="stylesheet" href="input.css"> 
+    <link rel="stylesheet" href="input.css">
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
     <script src="animation.js"></script>
     <script src="typewriter.js"></script>
@@ -18,10 +18,12 @@
 </head>
 
 <body class=" font-['Nunito'] w-[100%]">
-    <section id="Home" class="flex flex-col justify-between h-screen ">
+    <section id="Home" class="flex flex-col justify-between h-screen">
 
-
-        <header class="sticky z-20 flex items-center  justify-between px-4 mt-4 max-w-screen-xl">
+        <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
+        <spline-viewer class="absolute" url="https://prod.spline.design/PBQQBw8bfXDhBo7w/scene.splinecode"
+            events-target="global"></spline-viewer>
+        <header class="headnav sticky z-20 flex items-center justify-between p-4 max-w-screen">
             <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                 <circle cx="50" cy="50" r="48" stroke="white" stroke-width="4" fill="transparent" />
                 <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="60" fill="white"
@@ -31,7 +33,7 @@
             </svg>
             <div class="mx-5 flex gap-5 ">
                 <button id="theme-toggle" type="button">
-                    <svg id="sun-icon"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" class="feather feather-sun hidden">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -44,7 +46,9 @@
                         <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
-                    <svg id="moon-icon" class="whitecolor feather feather-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon hidden">
+                    <svg id="moon-icon" class="whitecolor feather feather-moon" xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon hidden">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
                 </button>
@@ -63,34 +67,35 @@
                     </svg>
                 </a>
                 <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="whatsapp"
-                    class="whitecolor svg-inline--fa fa-whatsapp fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 448 512">
+                    class="whitecolor svg-inline--fa fa-whatsapp fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" viewBox="0 0 448 512">
                     <path fill="currentColor"
                         d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z">
                     </path>
                 </svg>
             </div>
         </header>
-        <video class="absolute vid bg-cover max-h-screen" autoplay loop muted src="./assets/bg.mp4"></video>
-        <div class="-mt-16 flex relative fadein">
-            <div class="relative max-w-screen-xl mx-auto w-full px-4">
-                <div class=" relative ml-4 md:ml-12">
-                    <h1 class="text-[6rem] font-extrabold font-lato md:text-10xl mr-12 sm: text-[4rem] leading-normal m-4 aos-init aos-animate" data-aos="fade-right" data-aos-duration="1000">Chirag Jiwnani
-                    </h1>
-                    <p id="typing-text"
-                        class="pr-5 w-1/2 animate-typing font-merriweather italic text-2xl md: my-8 overflow-hidden whitespace-nowrap border-r-4 border-r-white  font-bold sm: text-2xl m-4"
-                        data-aos="fade-right" data-aos-duration="1000">
-                        Student | Freelancer
-                    </p>
+        <!-- <video class="absolute vid bg-cover max-h-screen" autoplay loop muted src="./assets/bg.mp4"></video> -->
 
-                    <button class="rainbowbtn text-lg py-2 px-5 rounded font-extrabold
+        <div class="relative w-[100%] mx-auto w-full px-4 -mt-16 flex relative fadein">
+            <div class=" relative ml-4 md:ml-12">
+                <h1 class="text-[6rem] font-extrabold font-lato md:text-10xl mr-12 sm: text-[4rem] leading-normal m-4 aos-init aos-animate"
+                    data-aos="fade-right" data-aos-duration="1000">Chirag Jiwnani
+                </h1>
+                <p id="typing-text"
+                    class="pr-5 w-1/2 animate-typing font-merriweather italic text-2xl md: my-8 overflow-hidden whitespace-nowrap border-r-4 border-r-white  font-bold sm: text-2xl m-4"
+                    data-aos="fade-right" data-aos-duration="1000">
+                    Student | Freelancer
+                </p>
+
+                <button class="rainbowbtn text-lg py-2 px-5 rounded font-extrabold
                         relative hover:scale-110 ease-in-out duration-300 group mb-[50px] shadow-lg shadow-black ">
-                        <a href="./assets/CV.pdf" target="_blank" download="">Download CV </a>
-                    </button>
-                </div>
+                    <a href="./assets/CV.pdf" target="_blank" download="">Download CV </a>
+                </button>
+
 
             </div>
-            <ul class="mx-4 space-y-6 linkbar p-3 rounded-lg text-[#b0b2c3] absolute right-2 top-[62%]"
+            <ul class="absolute right-[0rem] space-y-6 linkbar p-3 rounded-lg text-[#b0b2c3] z-99 m-6 top-[58%]"
                 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <li>
                     <a href="https://www.linkedin.com/in/chirag-jiwnani/" target="_blank">
@@ -149,7 +154,7 @@
             <div class="  my-4
             md: my-4
             sm: my-3">
-                <h1 class="headingnames  font-lato rounded-b-full justify-center flex fade-in text-[3rem] mt-[3rem] 
+                <h1 class="headingnames font-lato rounded-b-full justify-center flex fade-in text-[3rem] mt-[3rem] 
                 sm: text-[2rem]" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     About Me
                 </h1>
@@ -178,9 +183,9 @@
                         </ol>
                     </div>
                 </div>
-
-                <div class=" p-4 flex w-1/2 justify-center max-w-[30rem]" data-aos="fade-up" data-aos-duration="1000"
+                <div class=" p-4 flex w-[20rem] h-[20rem] justify-center" data-aos="fade-up" data-aos-duration="1000"
                     data-aos-delay="400">
+
                     <img class="border-cyan-600 border-8 rounded-3xl w-auto md: w-[20rem] h-[20rem]"
                         src="./assets/images/about.png" alt="">
                 </div>
@@ -622,12 +627,10 @@
             </div>
             <div class="my-5 flex flex-col w-[25rem] h-auto">
                 <div class="rainbowbtn rounded-xl p-1 shadow-md shadow-black">
-                    <input class="input rounded-xl h-[10rem] w-[100%] p-6 " type="Message"
-                        placeholder="Message...">
+                    <input class="input rounded-xl h-[10rem] w-[100%] p-6 " type="Message" placeholder="Message...">
                 </div>
                 <button class="">
-                    <div
-                        class="rainbowbtn m-6 w-30 h-10 p-2 rounded-xl font-extrabold shadow-lg shadow-black">
+                    <div class="rainbowbtn m-6 w-30 h-10 p-2 rounded-xl font-extrabold shadow-lg shadow-black">
                         Send Message
                     </div>
                 </button>
@@ -636,8 +639,7 @@
 
     <a href="#">
 
-        <button
-            class="topbtn sticky h-12 w-12 rounded-full left-[100rem] bottom-8 z-99 my-6 mx-6">
+        <button class="topbtn sticky h-12 w-12 rounded-full left-[100rem] bottom-8 z-99 my-6 mx-6">
             top
         </button>
     </a>
@@ -648,6 +650,7 @@
         AOS.init();
     </script>
     <!-- <script src="../path/to/flowbite/dist/flowbite.bundle.js"></script> -->
+
 
 </body>
 
