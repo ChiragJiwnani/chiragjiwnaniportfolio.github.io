@@ -1407,6 +1407,11 @@ input[type="range"]::-ms-fill-lower {
   border-end-start-radius: 0.5rem;
 }
 
+.rounded-b-full {
+  border-bottom-right-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+}
+
 .border {
   border-width: 1px;
 }
