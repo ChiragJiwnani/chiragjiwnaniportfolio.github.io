@@ -23,8 +23,8 @@
   color: white; 
 }
 .dark .headingnames {
-  background-color: rgba(255, 255, 255, 0.621);
-  box-shadow:0 0 0.3rem 0 white; 
+  background-color: rgba(255, 255, 255, 0.038);
+  /* box-shadow:0 0 0.3rem 0 rgb(74, 74, 74);  */
 }
 /* .dark .primary {
   background-color: #4B5563;
@@ -72,7 +72,7 @@
   background-image: linear-gradient(90deg, #7d6000 0%, #e9c349 100%);
 }
 .light .headingnames {
-  background-color: #c7c7c7;
+  background-color: #0000002c;
   
 }
 .light .whitecolor{
