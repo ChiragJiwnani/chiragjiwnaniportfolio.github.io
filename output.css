@@ -1173,6 +1173,22 @@ input[type="range"]::-ms-fill-lower {
   height: 100vh;
 }
 
+.h-\[28rem\] {
+  height: 28rem;
+}
+
+.h-0 {
+  height: 0px;
+}
+
+.h-1 {
+  height: 0.25rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
 .max-h-screen {
   max-height: 100vh;
 }
@@ -1227,6 +1243,14 @@ input[type="range"]::-ms-fill-lower {
 
 .w-full {
   width: 100%;
+}
+
+.w-1 {
+  width: 0.25rem;
+}
+
+.w-8 {
+  width: 2rem;
 }
 
 .max-w-fit {
@@ -1578,6 +1602,10 @@ input[type="range"]::-ms-fill-lower {
 
 .text-center {
   text-align: center;
+}
+
+.align-middle {
+  vertical-align: middle;
 }
 
 .font-\[\'Nunito\'\] {
@@ -1989,6 +2017,10 @@ input[type="range"]::-ms-fill-lower {
 
   .md\:mt-\[2rem\] {
     margin-top: 2rem;
+  }
+
+  .md\:w-\[20rem\] {
+    width: 20rem;
   }
 
   .md\:text-xl {
