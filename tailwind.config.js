@@ -4,16 +4,16 @@ module.exports = {
   content: ["./index.html", "./test.html"],
   theme: {
     screens: {
-      sm: "640px",
+      sm: "0",
       // => @media (min-width: 640px) { ... }
 
-      md: "768px",
+      md: "640px",
       // => @media (min-width: 768px) { ... }
 
-      lg: "1024px",
+      lg: "768px",
       // => @media (min-width: 1024px) { ... }
 
-      xl: "1280px",
+      xl: "1024px",
       // => @media (min-width: 1280px) { ... }
     },
     // font-family: ['Jersey 10', sans-serif],
