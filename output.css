@@ -1145,6 +1145,10 @@ input[type="range"]::-ms-fill-lower {
   height: 1.5rem;
 }
 
+.h-8 {
+  height: 2rem;
+}
+
 .h-9 {
   height: 2.25rem;
 }
@@ -1157,8 +1161,8 @@ input[type="range"]::-ms-fill-lower {
   height: 15rem;
 }
 
-.h-\[20rem\] {
-  height: 20rem;
+.h-\[28rem\] {
+  height: 28rem;
 }
 
 .h-\[80\%\] {
@@ -1171,22 +1175,6 @@ input[type="range"]::-ms-fill-lower {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[28rem\] {
-  height: 28rem;
-}
-
-.h-0 {
-  height: 0px;
-}
-
-.h-1 {
-  height: 0.25rem;
-}
-
-.h-8 {
-  height: 2rem;
 }
 
 .max-h-screen {
@@ -1209,12 +1197,12 @@ input[type="range"]::-ms-fill-lower {
   width: 1.75rem;
 }
 
-.w-\[100\%\] {
-  width: 100%;
+.w-8 {
+  width: 2rem;
 }
 
-.w-\[20rem\] {
-  width: 20rem;
+.w-\[100\%\] {
+  width: 100%;
 }
 
 .w-\[22rem\] {
@@ -1243,14 +1231,6 @@ input[type="range"]::-ms-fill-lower {
 
 .w-full {
   width: 100%;
-}
-
-.w-1 {
-  width: 0.25rem;
-}
-
-.w-8 {
-  width: 2rem;
 }
 
 .max-w-fit {
@@ -1435,10 +1415,6 @@ input[type="range"]::-ms-fill-lower {
   border-width: 1px;
 }
 
-.border-8 {
-  border-width: 8px;
-}
-
 .border-r-4 {
   border-right-width: 4px;
 }
@@ -1450,11 +1426,6 @@ input[type="range"]::-ms-fill-lower {
 .border-blue-950 {
   --tw-border-opacity: 1;
   border-color: rgb(23 37 84 / var(--tw-border-opacity));
-}
-
-.border-cyan-600 {
-  --tw-border-opacity: 1;
-  border-color: rgb(8 145 178 / var(--tw-border-opacity));
 }
 
 .border-lime-950 {
@@ -1602,10 +1573,6 @@ input[type="range"]::-ms-fill-lower {
 
 .text-center {
   text-align: center;
-}
-
-.align-middle {
-  vertical-align: middle;
 }
 
 .font-\[\'Nunito\'\] {
@@ -2017,10 +1984,6 @@ input[type="range"]::-ms-fill-lower {
 
   .md\:mt-\[2rem\] {
     margin-top: 2rem;
-  }
-
-  .md\:w-\[20rem\] {
-    width: 20rem;
   }
 
   .md\:text-xl {
