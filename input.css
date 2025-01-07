@@ -2,39 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-.indicator{
-    transition: left .4s;
+@media (max-width: 1020px) {
+  .navlist_box{
+    display: none;
   }
+}
+@media (min-width: 1020px) {
+  .navbar_dropdown{
+    display: none;
+  }
+}
+.indicator {
+  transition: left 0.4s;
+}
 
 .fade-in-visible {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
-.headingnames{
+.headingnames {
   font-weight: bolder;
 }
 
-
-
-
-
 .dark {
   background-image: linear-gradient(#202020, #141313);
-  color: white; 
+  color: white;
 }
 .dark .headingnames {
   background-color: rgba(255, 255, 255, 0.038);
   /* box-shadow:0 0 0.3rem 0 rgb(74, 74, 74);  */
 }
-/* .dark .primary {
-  background-color: #4B5563;
-}
-.dark .accent {
-  background-color: #2563EB;
-}
-.dark .secondary {
-  color: #EF4444;
-} */
+
 .dark .darkcolor {
   background-color: #2f2e2e;
 }
@@ -47,39 +45,34 @@
 .dark .bordertop {
   border-color: rgb(113, 13, 63);
 }
-.dark .vid{
+.dark .vid {
   opacity: 85%;
 }
-.dark .linkbar{
+.dark .linkbar {
   background-color: #141313;
-  box-shadow:0 0 1rem 0 white; 
+  box-shadow: 0 0 1rem 0 white;
 }
-.dark .topbtn{
+.dark .topbtn {
   background-color: #141313;
-  box-shadow:0 0 1rem 0 white; 
+  box-shadow: 0 0 1rem 0 white;
 }
-
-
-
-
 
 .light {
   background-image: linear-gradient(#dedede, #d9d9d9);
   color: #333333;
 }
-.light .headnav{
+.light .headnav {
   /* background-color: #333333; */
   background-image: linear-gradient(90deg, #7d6000 0%, #e9c349 100%);
 }
 .light .headingnames {
   background-color: #0000002c;
-  
 }
-.light .whitecolor{
+.light .whitecolor {
   color: #ffffff;
 }
 .light .darkcolor {
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
 }
 .light .input {
   background-color: #c7c7c7;
@@ -89,23 +82,22 @@
   /* background-color: #D4AF37; */
 }
 .light .bordertop {
-  border-color: #D4AF37;
+  border-color: #d4af37;
 }
-.light .vid{
+.light .vid {
   opacity: 100%;
 }
-.light .linkbar{
+.light .linkbar {
   background-image: linear-gradient(90deg, #7d6000 0%, #503f07 100%);
-  box-shadow:0 0 1rem 0 black; 
+  box-shadow: 0 0 1rem 0 black;
 }
-.light .topbtn{
+.light .topbtn {
   background-image: linear-gradient(90deg, #333333 0%, #222222 100%);
   color: #c7c7c7;
-  box-shadow:0 0 1rem 0 black;
+  box-shadow: 0 0 1rem 0 black;
 }
 
-
-/* From Uiverse.io by rishichawda */ 
+/* From Uiverse.io by rishichawda */
 /* The switch - the box around the slider */
 #theme-toggle-button {
   font-size: 17px;
@@ -177,3 +169,17 @@
 #toggle:checked + svg #stars {
   opacity: 1;
 }
+
+.navbar_list:hover {
+  transform: scale(1.1);
+  transition: 0.2s ease-in-out;
+}
+
+.progress{
+  
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 7.5px );
+  -webkit-backdrop-filter: blur( 7.5px );
+  
+}
+
