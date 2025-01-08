@@ -993,14 +993,6 @@ input[type="range"]::-ms-fill-lower {
   margin: 1.5rem;
 }
 
-.m-\[4rem\] {
-  margin: 4rem;
-}
-
-.m-\[9rem\] {
-  margin: 9rem;
-}
-
 .mx-10 {
   margin-left: 2.5rem;
   margin-right: 2.5rem;
@@ -1179,10 +1171,6 @@ input[type="range"]::-ms-fill-lower {
 
 .h-\[28rem\] {
   height: 28rem;
-}
-
-.h-\[2rem\] {
-  height: 2rem;
 }
 
 .h-\[80\%\] {
@@ -1454,10 +1442,6 @@ input[type="range"]::-ms-fill-lower {
   border-end-start-radius: 0.5rem;
 }
 
-.border {
-  border-width: 1px;
-}
-
 .border-r-4 {
   border-right-width: 4px;
 }
@@ -1588,6 +1572,11 @@ input[type="range"]::-ms-fill-lower {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.py-\[5rem\] {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .pr-5 {
@@ -1992,10 +1981,6 @@ input[type="range"]::-ms-fill-lower {
     margin-top: 20px;
   }
 
-  .sm\:mt-\[3rem\] {
-    margin-top: 3rem;
-  }
-
   .sm\:w-auto {
     width: auto;
   }
@@ -2021,10 +2006,6 @@ input[type="range"]::-ms-fill-lower {
 
   .md\:mt-\[2rem\] {
     margin-top: 2rem;
-  }
-
-  .md\:mt-\[3rem\] {
-    margin-top: 3rem;
   }
 
   .md\:text-xl {
