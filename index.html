@@ -1,1180 +1,541 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth ">
-
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="output.css">
-    <link rel="stylesheet" href="font.css">
-    <link rel="stylesheet" href="input.css">
-    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <title>Chirag Jiwnani | Portfolio</title>
+    <meta name="description" content="Chirag Jiwnani - Full Stack Developer & AI/ML Engineer Portfolio">
     
-    <!-- AOS CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="output.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader-spinner"></div>
+    </div>
 
-<body class=" font-['Nunito'] w-[100%]">
-    <section id="Home" class="flex flex-col justify-between h-screen">
+    <!-- Scroll Progress -->
+    <div class="scroll-progress"></div>
 
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- Navigation -->
+    <nav class="nav-main flex justify-between items-center">
+        <div class="font-bold text-xl tracking-tighter">CJ.</div>
+        
+        <!-- Desktop Menu -->
+        <div class="nav-links-desktop flex items-center gap-8">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#certifications" class="nav-link">Certifications</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle Theme">☀️</button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="mobile-menu-btn text-2xl z-[100]">☰</button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-menu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section px-4">
         <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
-        <spline-viewer class="absolute" url="https://prod.spline.design/PBQQBw8bfXDhBo7w/scene.splinecode"
-            events-target="global"></spline-viewer>
-        <header class="headnav sticky z-20 flex justify-between p-4 max-w-screen">
-            <div>
-                <img src="./assets/images/Access-To-Contact-Denied-Anima-unscreen.gif" class="h-12 w-12" alt=""
-                    srcset="">
+        <spline-viewer class="hero-spline" url="https://prod.spline.design/PBQQBw8bfXDhBo7w/scene.splinecode" events-target="global"></spline-viewer>
+        
+        <div class="max-w-7xl mx-auto w-full relative z-10">
+            <div class="hero-content max-w-3xl">
+                <div class="hero-badge reveal">
+                    <div class="dot"></div>
+                    Available for new opportunities
+                </div>
+                
+                <h1 class="hero-name reveal reveal-delay-1">Chirag Jiwnani</h1>
+                
+                <div class="typewriter-container reveal reveal-delay-2">
+                    I am a <span id="typewriter-text" class="gradient-text font-bold"></span><span class="typewriter-cursor"></span>
+                </div>
+                
+                <div class="flex flex-wrap gap-4 mt-8 reveal reveal-delay-3">
+                    <a href="./Chirag_Jiwnani_Resume.pdf" target="_blank" class="hero-cta cta-primary">
+                        <i class="fa-solid fa-download"></i> Download Resume
+                    </a>
+                    <a href="#projects" class="hero-cta cta-secondary">
+                        View Projects
+                    </a>
+                </div>
             </div>
-            <div class="flex">
-                <div class="items-center  p-4 ">
-                    <ul class="navlist_box flex gap-6 font-bold text-md items-center justify-center">
-                        <a class="navbar_list transition ease-in-out 0.delay-2000 text-center" href="#About">
-                            <li>About Me</li>
-                        </a>
-                        <a class="navbar_list transition ease-in-out delay-2000 text-center" href="#Skills">
-                            <li>Skills and Experience</li>
-                        </a>
+        </div>
 
-                        <a class="navbar_list transition ease-in-out delay-2000 text-center" href="#Certificates">
-                            <li>My Certifications</li>
-                        </a>
-                        <a class="navbar_list transition ease-in-out delay-2000 text-center" href="#Project">
-                            <li>My Projects</li>
-                        </a>
-                        <a class="navbar_list transition ease-in-out delay-2000 text-center" href="#Contact">
-                            <li>Lets Work Together</li>
-                        </a>
+        <!-- Social Sidebar -->
+        <div class="social-sidebar reveal reveal-delay-4">
+            <a href="https://www.linkedin.com/in/chirag-jiwnani/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/chiragjiwnani" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.behance.net/chiragjiwnani" target="_blank" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+            <a href="mailto:chiragworks005@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </section>
+
+    <!-- About Section (Bento Grid) -->
+    <section id="about" class="section-container">
+        <div class="section-label reveal">01. Who am I</div>
+        <h2 class="section-title reveal reveal-delay-1">About Me</h2>
+        <div class="section-divider reveal reveal-delay-2"></div>
+
+        <div class="bento-grid">
+            <!-- Bio -->
+            <div class="bento-card bento-large reveal">
+                <h3 class="text-xl font-bold mb-4 text-[var(--accent)]"><i class="fa-solid fa-user-astronaut mr-2"></i> Objectives</h3>
+                <p class="text-[var(--text-secondary)] leading-relaxed text-lg">
+                    As a detail-oriented software and data professional with experience in machine learning, automation, and data visualization, the intention is to get a Master's degree in AI or Data Science. Aiming to learn more about advanced analytics, scalable ML systems, and AI deployment so that smart solutions that improve operational efficiency, predictive accuracy, and strategic decision-making in all fields can be built.
+                </p>
+            </div>
+            
+            <!-- Location -->
+            <div class="bento-card reveal reveal-delay-1 flex flex-col justify-center items-center text-center">
+                <i class="fa-solid fa-earth-asia text-4xl mb-4 text-[var(--gradient-start)]"></i>
+                <h3 class="font-bold text-lg">Based In</h3>
+                <p class="text-[var(--text-secondary)]">Mumbai, Maharashtra</p>
+            </div>
+
+            <!-- Education -->
+            <div class="bento-card bento-large reveal reveal-delay-2">
+                <h3 class="text-xl font-bold mb-4 text-[var(--accent)]"><i class="fa-solid fa-graduation-cap mr-2"></i> Education</h3>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <h4 class="font-bold">B.Tech in Artificial Intelligence and Machine Learning</h4>
+                            <span class="text-sm font-mono text-[var(--accent)]">July 2021 - May 2025</span>
+                        </div>
+                        <p class="text-[var(--text-secondary)] text-sm">Dwarkadas J. Sanghvi College of Engineering</p>
+                        <p class="text-sm mt-1">CGPA: 7.5/10</p>
+                    </div>
+                    <div class="h-px bg-[var(--glass-border)] w-full"></div>
+                    <div>
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <h4 class="font-bold">Certification in Data Science</h4>
+                            <span class="text-sm font-mono text-[var(--accent)]">Jan 2025 - Present</span>
+                        </div>
+                        <p class="text-[var(--text-secondary)] text-sm">Indian Institute of Technology Guwahati (IITG)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="bento-card reveal reveal-delay-3 flex flex-col justify-center">
+                <h3 class="font-bold mb-4 text-center">Languages</h3>
+                <div class="flex flex-wrap gap-2 justify-center">
+                    <span class="px-3 py-1 bg-[var(--glass-bg)] rounded-full text-sm">🇬🇧 English</span>
+                    <span class="px-3 py-1 bg-[var(--glass-bg)] rounded-full text-sm">🇮🇳 Hindi</span>
+                    <span class="px-3 py-1 bg-[var(--glass-bg)] rounded-full text-sm">🇪🇸 Spanish (A1)</span>
+                    <span class="px-3 py-1 bg-[var(--glass-bg)] rounded-full text-sm">🇮🇳 Sindhi</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section (Timeline) -->
+    <section id="experience" class="section-container">
+        <div class="section-label reveal">02. Career Path</div>
+        <h2 class="section-title reveal reveal-delay-1">Work Experience</h2>
+        <div class="section-divider reveal reveal-delay-2"></div>
+
+        <div class="timeline mt-12">
+            <!-- Exp 1 -->
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-date">Aug 2025 - Present</div>
+                    <h3 class="timeline-role">Full Stack Developer</h3>
+                    <div class="timeline-company">360 ONE</div>
+                    <ul class="timeline-detail list-disc ml-4 space-y-2 mt-4">
+                        <li>Built and maintained end-to-end full-stack applications (frontend, backend, database), improving system stability and resolving 30%+ production issues.</li>
+                        <li>Implemented new platform capabilities, including GCS integration and in-house report generation, eliminating dependency on external tools and saving the infrastructure cost of 3 servers.</li>
+                        <li>Developed a Python-based automated regression testing framework, reducing manual testing effort by 60–70% and accelerating release cycles.</li>
                     </ul>
                 </div>
-                <div class="navbar_dropdown">
+            </div>
 
-                    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
-                        class="font-bold rounded-lg text-md px-5 py-2.5 text-center inline-flex items-center"
-                        type="button">Menu<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m1 1 4 4 4-4" />
-                        </svg>
-                    </button>
-
-                    <!-- Dropdown menu -->
-                    <div id="dropdown"
-                        class="absolute z-10 hidden darkcolor divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 ">
-                        <ul class="py-2 text-md  " aria-labelledby="dropdownDefaultButton">
-                            <li>
-                                <a href="#About"
-                                    class="block px-4 py-2  hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">About
-                                    Me</a>
-                            </li>
-                            <li>
-                                <a href="#Skills"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Skills
-                                    and Experience</a>
-                            </li>
-                            <li>
-                                <a href="#Certificates"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">My
-                                    Certifications</a>
-                            </li>
-                            <li>
-                                <a href="#Project"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">My
-                                    Projects
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#Contact"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Lets
-                                    Work Together
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-
-                </div>
-
-                <div class="flex gap-5 items-center">
-                    <button id="theme-toggle" type="button">
-
-                        <label id="theme-toggle-button" class="top-0">
-                            <input class="absolute" type="checkbox" id="toggle">
-                            <svg viewBox="0 0 69.667 44" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g transform="translate(3.5 3.5)" data-name="Component 15 – 1" id="Component_15_1">
-                                    <g>
-                                        <g filter="url(#container)" transform="matrix(1, 0, 0, 1, -3.5, -3.5)">
-                                            <rect fill="#83cbd8" transform="translate(3.5 3.5)" rx="17.5" height="35"
-                                                width="60.667" data-name="container" id="container"></rect>
-                                        </g>
-                                        <g transform="translate(2.333 2.333)" id="button">
-                                            <!-- Sun -->
-                                            <g data-name="sun" id="sun-icon" style="">
-                                                <g filter="url(#sun-outer)"
-                                                    transform="matrix(1, 0, 0, 1, -5.83, -5.83)">
-                                                    <circle fill="#f8e664" transform="translate(5.83 5.83)" r="15.167"
-                                                        cy="15.167" cx="15.167" data-name="sun-outer" id="sun-outer-2">
-                                                    </circle>
-                                                </g>
-                                                <g filter="url(#sun)" transform="matrix(1, 0, 0, 1, -5.83, -5.83)">
-                                                    <path fill="rgba(246,254,247,0.29)" transform="translate(9.33 9.33)"
-                                                        d="M11.667,0A11.667,11.667,0,1,1,0,11.667,11.667,11.667,0,0,1,11.667,0Z"
-                                                        data-name="sun" id="sun-3"></path>
-                                                </g>
-                                                <circle fill="#fcf4b9" transform="translate(8.167 8.167)" r="7" cy="7"
-                                                    cx="7" id="sun-inner"></circle>
-                                            </g>
-
-                                            <!-- Moon -->
-                                            <g data-name="moon" id="moon-icon" style="display: none;">
-                                                <g filter="url(#moon)" transform="matrix(1, 0, 0, 1, -31.5, -5.83)">
-                                                    <circle fill="#cce6ee" transform="translate(31.5 5.83)" r="15.167"
-                                                        cy="15.167" cx="15.167" data-name="moon" id="moon-3"></circle>
-                                                </g>
-                                                <g fill="#a6cad0" transform="translate(-24.415 -1.009)" id="patches">
-                                                    <circle transform="translate(43.009 4.496)" r="2" cy="2" cx="2">
-                                                    </circle>
-                                                    <circle transform="translate(39.366 17.952)" r="2" cy="2" cx="2"
-                                                        data-name="patch"></circle>
-                                                    <circle transform="translate(33.016 8.044)" r="1" cy="1" cx="1"
-                                                        data-name="patch"></circle>
-                                                    <circle transform="translate(51.081 18.888)" r="1" cy="1" cx="1"
-                                                        data-name="patch"></circle>
-                                                    <circle transform="translate(33.016 22.503)" r="1" cy="1" cx="1"
-                                                        data-name="patch"></circle>
-                                                    <circle transform="translate(50.081 10.53)" r="1.5" cy="1.5"
-                                                        cx="1.5" data-name="patch"></circle>
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </g>
-                                    <g filter="url(#cloud)" transform="matrix(1, 0, 0, 1, -3.5, -3.5)">
-                                        <path fill="#fff" transform="translate(-3466.47 -160.94)"
-                                            d="M3512.81,173.815a4.463,4.463,0,0,1,2.243.62.95.95,0,0,1,.72-1.281,4.852,4.852,0,0,1,2.623.519c.034.02-.5-1.968.281-2.716a2.117,2.117,0,0,1,2.829-.274,1.821,1.821,0,0,1,.854,1.858c.063.037,2.594-.049,3.285,1.273s-.865,2.544-.807,2.626a12.192,12.192,0,0,1,2.278.892c.553.448,1.106,1.992-1.62,2.927a7.742,7.742,0,0,1-3.762-.3c-1.28-.49-1.181-2.65-1.137-2.624s-1.417,2.2-2.623,2.2a4.172,4.172,0,0,1-2.394-1.206,3.825,3.825,0,0,1-2.771.774c-3.429-.46-2.333-3.267-2.2-3.55A3.721,3.721,0,0,1,3512.81,173.815Z"
-                                            data-name="cloud" id="cloud"></path>
-                                    </g>
-                                    <g fill="#def8ff" transform="translate(3.585 1.325)" id="stars">
-                                        <path transform="matrix(-1, 0.017, -0.017, -1, 24.231, 3.055)"
-                                            d="M.774,0,.566.559,0,.539.458.933.25,1.492l.485-.361.458.394L1.024.953,1.509.592.943.572Z">
-                                        </path>
-                                        <path transform="matrix(-0.777, 0.629, -0.629, -0.777, 23.185, 12.358)"
-                                            d="M1.341.529.836.472.736,0,.505.46,0,.4.4.729l-.231.46L.605.932l.4.326L.9.786Z"
-                                            data-name="star"></path>
-                                        <path transform="matrix(0.438, 0.899, -0.899, 0.438, 23.177, 29.735)"
-                                            d="M.015,1.065.475.9l.285.365L.766.772l.46-.164L.745.494.751,0,.481.407,0,.293.285.658Z"
-                                            data-name="star"></path>
-                                        <path transform="translate(12.677 0.388) rotate(104)"
-                                            d="M1.161,1.6,1.059,1,1.574.722.962.607.86,0,.613.572,0,.457.446.881.2,1.454l.516-.274Z"
-                                            data-name="star"></path>
-                                        <path transform="matrix(-0.07, 0.998, -0.998, -0.07, 11.066, 15.457)"
-                                            d="M.873,1.648l.114-.62L1.579.945,1.03.62,1.144,0,.706.464.157.139.438.7,0,1.167l.592-.083Z"
-                                            data-name="star"></path>
-                                        <path transform="translate(8.326 28.061) rotate(11)"
-                                            d="M.593,0,.638.724,0,.982l.7.211.045.724.36-.64.7.211L1.342.935,1.7.294,1.063.552Z"
-                                            data-name="star"></path>
-                                        <path transform="translate(5.012 5.962) rotate(172)"
-                                            d="M.816,0,.5.455,0,.311.323.767l-.312.455.516-.215.323.456L.827.911,1.343.7.839.552Z"
-                                            data-name="star"></path>
-                                        <path transform="translate(2.218 14.616) rotate(169)"
-                                            d="M1.261,0,.774.571.114.3.487.967,0,1.538.728,1.32l.372.662.047-.749.728-.218L1.215.749Z"
-                                            data-name="star"></path>
-                                    </g>
-                                </g>
-                            </svg>
-                        </label>
-
-                    </button>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="hidden">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <a href="tel:+91-8182831488">
-                        <img src="./assets/images/Call.png" class="h-8 w-8" alt="" srcset="">
-
-                    </a>
-
+            <!-- Exp 2 -->
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-date">May 2025 - Aug 2025</div>
+                    <h3 class="timeline-role">AIML Engineer / Business Analyst</h3>
+                    <div class="timeline-company">Alisped Pvt. Ltd.</div>
+                    <ul class="timeline-detail list-disc ml-4 space-y-2 mt-4">
+                        <li>Built 7+ freight schedule scrapers (Maersk, MSC, etc.), tracking 10K+ shipments.</li>
+                        <li>Developed an inventory manager for asset tracking across teams.</li>
+                        <li>Designed 5+ interactive Power BI dashboards, aiding 20% faster decision-making.</li>
+                    </ul>
                 </div>
             </div>
-        </header>
-        <!-- <video class="absolute vid bg-cover max-h-screen" autoplay loop muted src="./assets/bg.mp4"></video> -->
 
-        <div class="relative w-[100%] mx-auto w-full px-4 -mt-16 flex relative fadein">
-            <div class=" relative ml-4 md:ml-12">
-                <h1 class="text-[6rem] font-extrabold font-lato md:text-10xl mr-12 sm: text-[4rem] leading-normal m-4 aos-init aos-animate"
-                    data-aos="fade-right" data-aos-duration="1000">Chirag Jiwnani
-                </h1>
-                <p id="typing-text"
-                    class="pr-5 w-1/2 animate-typing font-merriweather italic text-2xl md: my-8 overflow-hidden whitespace-nowrap border-r-4 border-r-white  font-bold sm: text-2xl m-4"
-                    data-aos="fade-right" data-aos-duration="1000">
-                    Student | Freelancer
-                </p>
-
-                <button class="rainbowbtn text-lg py-2 px-5 rounded font-extrabold
-                        relative hover:scale-110 ease-in-out duration-300 group mb-[50px] shadow-lg shadow-black ">
-                    <a href="./assets/CV new 1.pdf" target="_blank" download="">Download CV </a>
-                </button>
-
-
+            <!-- Exp 3 -->
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-date">July 2024 - Nov 2024</div>
+                    <h3 class="timeline-role">Web Development Intern</h3>
+                    <div class="timeline-company">Nullclass</div>
+                    <ul class="timeline-detail list-disc ml-4 space-y-2 mt-4">
+                        <li>Developed and maintained a YouTube-inspired web application, implementing secure private group chats, VoIP communication, and real-time screen sharing features.</li>
+                        <li>Integrated multilingual comment translation and gesture-based video controls, collaborating with cross-functional teams to enhance usability, accessibility, and performance.</li>
+                    </ul>
+                </div>
             </div>
-            <ul class="absolute right-[0rem] space-y-6 linkbar p-3 rounded-lg text-[#b0b2c3] z-99 m-6 top-[58%]"
-                data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                <li>
-                    <a href="https://www.linkedin.com/in/chirag-jiwnani/" target="_blank">
-                        <svg class="w-7 hover:text-white shadow shadow-2xl shadow-white"
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                            <path fill="currentColor"
-                                d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
-                        </svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.behance.net/chiragjiwnani">
-                        <svg class="w-7 hover:text-white" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                            viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z" />
-                        </svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/chirag.jiwnani/">
-                        <svg class="w-7 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                            <path fill="currentColor"
-                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
-                        </svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:chiragworks005@gmail.com" target="_blank">
-                        <svg class="w-7 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path fill="currentColor"
-                                d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
-                        </svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/chiragjiwnani">
-                        <svg class="w-7 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
-                            <path fill="currentColor"
-                                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="relative self-center">
-            <!-- <button class="rainbowbtn text-lg py-2 px-5 rounded font-extrabold
-        relative hover:scale-110 ease-in-out duration-300 group mb-[50px] shadow-lg shadow-black ">
-                <a href="#About">About Me</a> -->
 
-            </button>
+            <!-- Exp 4 -->
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-date">Nov 2023 - Dec 2023</div>
+                    <h3 class="timeline-role">AI Intern</h3>
+                    <div class="timeline-company">Inventrom Private Limited</div>
+                    <ul class="timeline-detail list-disc ml-4 space-y-2 mt-4">
+                        <li>Developed AI applications, including a recipe generator, image generator, and AI Telegram bot, using Python libraries and frameworks.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="About" class="h-auto bordertop border-t-8 w-[100%]">
-        <div class="">
-            <div class="">
-                <h1 class="headingnames font-lato justify-center flex fade-in  
-                lg:text-[4rem]  
-                sm:text-[2rem]" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    About Me
-                </h1>
-            </div>
-            <div class="py-[5rem] flex flex-row w-auto justify-evenly sm: flex-wrap">
-                <div class="lg: w-[45rem]
-                md: w-[45rem]
-                sm: w-[25rem] m-6">
-                    <p class=" mx-auto text-2xl h-auto md: text-2xl p-2 sm:w-auto text-lg p-2" data-aos="fade-up"
-                        data-aos-duration="1000" data-aos-delay="400">
-                        I am pursuing my bachelor's in Artificial Intelligence and Machine Learning and at Dwarkadas J.
-                        Sanghvi College of Engineering. I have a lot of enthusiasm for Artificial intelligence and Data
-                        Science. I'm highly interested in
-                        working as
-                        an intern in these fields.I had the chance to work as an AI intern at Inventrom Pvt. Ltd. while
-                        I was pursuing my degree. I have worked on multiple projects like Anti- Procastination Specs, AI
-                        Custom recipe maker, Youtube clone, etc. Along with my technical abilities, I also possess:
-                    </p>
-                    <div class="mx-8 w-auto 
-                    lg: text-xl p-2
-                    sm: text-md font-extrabold" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                        <ol>
-                            <li class="list-disc"> Strong Communication Skills</li>
-                            <li class="list-disc"> Problem-Solving-Skills</li>
-                            <li class="list-disc"> On Time Project Delivery</li>
-                            <li class="list-disc"> Collaboration Skills</li>
-                        </ol>
+    <!-- Skills Section (Tag Cloud) -->
+    <section id="skills" class="section-container">
+        <div class="section-label reveal">03. Arsenal</div>
+        <h2 class="section-title reveal reveal-delay-1">Technical Skills</h2>
+        <div class="section-divider reveal reveal-delay-2"></div>
+
+        <div class="glass-card reveal">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div>
+                    <div class="skill-category-title">Languages</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">C/C++</span>
+                        <span class="skill-tag">MySQL</span>
                     </div>
                 </div>
-                <div class=" p-4 flex w-[25rem] h-[28rem] justify-center" data-aos="fade-up" data-aos-duration="1000"
-                    data-aos-delay="400">
-                    <img class="rounded-3xl w-auto" src="./assets/images/about.png" alt="">
+
+                <div>
+                    <div class="skill-category-title">Frameworks & Tools</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Streamlit</span>
+                    </div>
                 </div>
+
+                <div>
+                    <div class="skill-category-title">Libraries & AI</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Keras</span>
+                        <span class="skill-tag">NLTK</span>
+                        <span class="skill-tag">Spacy</span>
+                        <span class="skill-tag">SciPy</span>
+                        <span class="skill-tag">Seaborn</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="skill-category-title">DevOps, Cloud & DB</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Power BI</span>
+                    </div>
+                </div>
+
             </div>
-        </div>
         </div>
     </section>
 
-    <section id="Skills" class="h-auto w-[100%]">
-        <div class="">
-            <div class="">
-                <h1 class="headingnames font-lato justify-center flex fade-in  
-                lg:text-[4rem]  
-            sm:text-[2rem]" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    Skills and Experience
-                </h1>
-            </div>
-            <div class="flex flex-row ">
-                <div class="w-auto">
-                    <p class="lg:text-xl h-auto text-wrap 
-            md:text-xl m-6 px-16 py-8 ml-10 
-            sm:text-lg m-2 flex-wrap " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        I am passionate about continuous learning, staying up-to-date with the latest trends and
-                        techniques in data science, and seeking opportunities to apply new skills and knowledge to solve
-                        real-world problems.
-                    </p>
-                    <div class="flex flex-col w-[100%] text-lg p-2 my-6 justify-center
-                ">
-                        <div role="tablist" aria-label="tabs"
-                            class="flex relative justify-center w-auto mx-[9%] h-10 grid grid-cols-2 items-center px-[3px] rounded-full darkcolor shadow-2xl shadow-900/20 transition shadow-black "
-                            data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                            <div
-                                class="absolute indicator h-9 w-[50%] my-auto rounded-full rainbowbtn shadow-sm shadow-black">
-                            </div>
-                            <button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0"
-                                class="relative block h-11 px-4 tab rounded-full">
-                                <span class=" font-bold">Skills</span>
-                            </button>
-                            <button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1"
-                                class="relative block h-10 px-4 tab rounded-full">
-                                <span class=" font-bold">Experience</span>
-                            </button>
+    <!-- Projects Section -->
+    <section id="projects" class="section-container">
+        <div class="section-label reveal">04. Showcase</div>
+        <h2 class="section-title reveal reveal-delay-1">My Projects</h2>
+        <div class="section-divider reveal reveal-delay-2"></div>
 
+        <div class="projects-grid mt-10">
+            <!-- Unified AI Assistant -->
+            <a href="#" class="project-card reveal">
+                <div class="project-featured">Featured</div>
+                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800" alt="Unified AI Assistant">
+                <div class="project-card-info">
+                    <h3 class="project-card-title">Unified AI Assistant</h3>
+                    <p class="text-[var(--text-secondary)] text-sm mb-3">Multipurpose assistant app integrating PDF Q&A, YouTube video summarization, AI image generation, and smart dashboards.</p>
+                    <div class="project-card-tech">GenAI • Streamlit • Hugging Face • Mistral</div>
+                </div>
+            </a>
+
+            <!-- DataCraft -->
+            <a href="https://github.com/ChiragJiwnani/DataCraft---End-to-End-Data-Science-Project-Tool" target="_blank" class="project-card reveal reveal-delay-1">
+                <div class="project-featured">Featured</div>
+                <img src="./assets/images/DataCraft.jpg" alt="DataCraft">
+                <div class="project-card-info">
+                    <h3 class="project-card-title">DataCraft</h3>
+                    <p class="text-[var(--text-secondary)] text-sm mb-3">End-to-end data science project tool for non-coders to preprocess data, train models, and visualize fairness.</p>
+                    <div class="project-card-tech">Flask • Docker • AWS EC2 • ML</div>
+                </div>
+            </a>
+
+            <!-- IKSHA -->
+            <a href="https://github.com/ChiragJiwnani/IKSHA-AntiProcrastination_Specs" target="_blank" class="project-card reveal reveal-delay-2">
+                <div class="project-featured">Featured</div>
+                <img src="./assets/images/Iksha.png" alt="Iksha">
+                <div class="project-card-info">
+                    <h3 class="project-card-title">IKSHA</h3>
+                    <p class="text-[var(--text-secondary)] text-sm mb-3">Anti-Procrastination Specs utilizing R-CNN and IoT, achieving 90% accuracy in task recognition.</p>
+                    <div class="project-card-tech">AI • R-CNN • IoT</div>
+                </div>
+            </a>
+
+            <!-- YouTube Clone -->
+            <a href="https://chirags-youtube-clone.netlify.app" target="_blank" class="project-card reveal">
+                <img src="./assets/images/youtube.png" alt="YouTube Clone">
+                <div class="project-card-info">
+                    <h3 class="project-card-title">YouTube Clone</h3>
+                    <div class="project-card-tech">React • RapidAPI</div>
+                </div>
+            </a>
+
+            <!-- Task Manager -->
+            <a href="https://github.com/ChiragJiwnani/Taskmanager" target="_blank" class="project-card reveal reveal-delay-1">
+                <img src="./assets/images/task manager.jpg" alt="Task Manager">
+                <div class="project-card-info">
+                    <h3 class="project-card-title">Task Manager</h3>
+                    <div class="project-card-tech">Web Development</div>
+                </div>
+            </a>
+
+            <!-- Custom Recipe Generator -->
+            <a href="https://github.com/ChiragJiwnani/Custom-Recipe-Generator" target="_blank" class="project-card reveal reveal-delay-2">
+                <img src="./assets/images/recipe.png" alt="Recipe Generator">
+                <div class="project-card-info">
+                    <h3 class="project-card-title">Custom Recipe Generator</h3>
+                    <div class="project-card-tech">AI • Python</div>
+                </div>
+            </a>
+            
+             <!-- License Plate Detector -->
+            <a href="https://github.com/ChiragJiwnani/Automatic-Fining-System" target="_blank" class="project-card reveal">
+                <img src="./assets/images/numberplate.jpg" alt="License Plate">
+                <div class="project-card-info">
+                    <h3 class="project-card-title">Realtime License Plate Detector</h3>
+                    <div class="project-card-tech">Computer Vision</div>
+                </div>
+            </a>
+
+             <!-- Dashboards -->
+             <a href="https://github.com/ChiragJiwnani/PrimeVideo_Dashboard" target="_blank" class="project-card reveal reveal-delay-1">
+                <img src="./assets/images/primevideo.png" alt="Prime Video Dashboard">
+                <div class="project-card-info">
+                    <h3 class="project-card-title">Prime Video Dashboard</h3>
+                    <div class="project-card-tech">Power BI</div>
+                </div>
+            </a>
+
+            <a href="https://github.com/ChiragJiwnani/Blinkit_Dashboard" target="_blank" class="project-card reveal reveal-delay-2">
+                <img src="./assets/images/blinkit.png" alt="Blinkit Dashboard">
+                <div class="project-card-info">
+                    <h3 class="project-card-title">Blinkit Dashboard</h3>
+                    <div class="project-card-tech">Power BI</div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Certifications & Leadership -->
+    <section id="certifications" class="section-container">
+        <div class="section-label reveal">05. Achievements</div>
+        <h2 class="section-title reveal reveal-delay-1">Certifications & Leadership</h2>
+        <div class="section-divider reveal reveal-delay-2"></div>
+
+        <h3 class="text-xl font-bold mb-6 mt-10 text-[var(--text-secondary)] reveal">Certifications</h3>
+        <div class="cert-grid">
+            <a href="https://www.cloudskillsboost.google/public_profiles/734410b0-6824-44ea-8437-d42e653f0f55/badges/4976311" target="_blank" class="cert-badge reveal">
+                <div class="cert-icon text-[#4285F4]"><i class="fa-brands fa-google"></i></div>
+                <div>
+                    <div class="cert-name">Generative AI & LLMs</div>
+                    <div class="cert-date">Google • Nov 2024</div>
+                </div>
+            </a>
+            
+            <a href="./assets/images/Oracle eCertificate.pdf" target="_blank" class="cert-badge reveal reveal-delay-1">
+                <div class="cert-icon text-[#f80000]"><i class="fa-solid fa-cloud"></i></div>
+                <div>
+                    <div class="cert-name">OCI Gen AI Certified Professional</div>
+                    <div class="cert-date">Oracle • Oct 2024</div>
+                </div>
+            </a>
+
+            <a href="./assets/images/TATA forage.pdf" target="_blank" class="cert-badge reveal reveal-delay-2">
+                <div class="cert-icon text-[#2e3192]"><i class="fa-solid fa-chart-pie"></i></div>
+                <div>
+                    <div class="cert-name">Data Visualization</div>
+                    <div class="cert-date">TATA • Sep 2024</div>
+                </div>
+            </a>
+
+            <a href="./assets/images/Microsoft Azure Fundamentals.pdf" target="_blank" class="cert-badge reveal">
+                <div class="cert-icon text-[#00a4ef]"><i class="fa-brands fa-microsoft"></i></div>
+                <div>
+                    <div class="cert-name">Azure Fundamentals (AZ-900)</div>
+                    <div class="cert-date">Microsoft • Mar 2024</div>
+                </div>
+            </a>
+
+            <a href="./assets/images/PWC_ Data visualisation_completion_certificate.pdf" target="_blank" class="cert-badge reveal reveal-delay-1">
+                <div class="cert-icon text-[#d04a02]"><i class="fa-solid fa-chart-bar"></i></div>
+                <div>
+                    <div class="cert-name">Power BI Data Visualization</div>
+                    <div class="cert-date">PWC</div>
+                </div>
+            </a>
+
+            <a href="./assets/images/Quantium_completion_certificate.pdf" target="_blank" class="cert-badge reveal reveal-delay-2">
+                <div class="cert-icon text-[var(--accent)]"><i class="fa-solid fa-database"></i></div>
+                <div>
+                    <div class="cert-name">Data Analytics</div>
+                    <div class="cert-date">Quantium</div>
+                </div>
+            </a>
+        </div>
+
+        <h3 class="text-xl font-bold mb-6 mt-16 text-[var(--text-secondary)] reveal">Leadership & Community</h3>
+        <div class="leadership-grid">
+            <div class="leadership-card reveal">
+                <h4 class="font-bold text-lg text-[var(--accent)] mb-2">Research Award</h4>
+                <div class="font-bold mb-1">Sustainability of Consumer Goods</div>
+                <div class="text-sm text-[var(--text-secondary)]">NMIMS Social Conclave • Mar 2022</div>
+                <p class="text-sm mt-3">Led the team and presented vital issues about sustainability.</p>
+            </div>
+            
+            <div class="leadership-card reveal reveal-delay-1">
+                <h4 class="font-bold text-lg text-[var(--gradient-start)] mb-2">1st Place</h4>
+                <div class="font-bold mb-1">Bull Run</div>
+                <div class="text-sm text-[var(--text-secondary)]">DJSCE ISME • Mar 2022</div>
+                <p class="text-sm mt-3">Winner of the stock marketing competition organized by DJSCE ISME.</p>
+            </div>
+
+            <div class="leadership-card reveal reveal-delay-2">
+                <h4 class="font-bold text-lg text-[var(--gradient-mid)] mb-2">Council Member (Tech)</h4>
+                <div class="font-bold mb-1">DJS E-Cell</div>
+                <div class="text-sm text-[var(--text-secondary)]">Mar 2022 - Feb 2023</div>
+                <p class="text-sm mt-3">Led and executed layout design initiatives for the website, ensuring consistency and responsiveness.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-container mb-20">
+        <div class="section-label reveal">06. What's Next?</div>
+        <h2 class="section-title reveal reveal-delay-1">Get In Touch</h2>
+        <div class="section-divider reveal reveal-delay-2"></div>
+
+        <div class="glass-card reveal mt-8">
+            <div class="contact-grid">
+                <!-- Info -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Let's work together!</h3>
+                    <p class="text-[var(--text-secondary)] mb-8">I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <div class="text-sm text-[var(--text-secondary)]">Location</div>
+                            <div class="font-medium">Andheri West, Mumbai</div>
                         </div>
-                        <div class="mt-6 relative rounded-3xl darkcolor justify-center flex shadow-md shadow-black max-w-fit mx-auto w-[100%]]"
-                            data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                            <div role="tabpanel" id="panel-1"
-                                class=" flex tab-panel py-6 transition duration-300 w-auto justify-center mx-auto ">
-                                <div id="skillsContent" class="flex justify-around flex-wrap">
-                                    <div class="px-10 w-[25rem] list-none text-lg font-extrabold justify-center sm:">
-                                        <div class="my-10 flex flex-col">
-                                            <div class="flex justify-between ">
-                                                <h1>Python</h1>
-
-                                            </div>
-                                            <div class="progress transition duration-3000 bg-sky-500 h-2 rounded-full shadow drop-shadow-xl shadow-black hover:"
-                                                role="progressbar" aria-valuenow="95" aria-valuemin="0"
-                                                aria-valuemax="100" style="width: 95%;"></div>
-                                        </div>
-                                        <div class=" my-10 flex flex-col">
-                                            <div class="flex justify-between ">
-                                                <h1>Machine Learning</h1>
-
-                                            </div>
-                                            <div class="progress transition duration-3000 bg-lime-400 h-2 rounded-full shadow drop-shadow-xl shadow-black"
-                                                role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                                                aria-valuemax="100" style="width: 80%;"></div>
-                                        </div>
-                                        <div class="mt-10 flex flex-col justify-center">
-                                            <div class="flex justify-between ">
-                                                <h1>Data Analysis</h1>
-
-                                            </div>
-                                            <div class="progress transition duration-3000 bg-pink-400 rounded-full h-2 shadow drop-shadow-xl shadow-black"
-                                                role="progressbar" aria-valuenow="85" aria-valuemin="0"
-                                                aria-valuemax="100" style="width: 85%;"></div>
-                                        </div>
-                                    </div>
-                                    <div class="px-10 font-extrabold text-lg mt-10 w-[25rem]">
-                                        <div class="flex flex-col">
-                                            <div class="flex justify-between">
-                                                <h1>Data Visualisation</h1>
-
-                                            </div>
-                                            <div class="progress transition duration-3000 bg-red-600 rounded-full h-2 shadow drop-shadow-xl shadow-black"
-                                                role="progressbar" aria-valuenow="95" aria-valuemin="0"
-                                                aria-valuemax="100" style="width: 95%;"></div>
-                                        </div>
-                                        <div class="my-10 flex flex-col">
-                                            <div class="flex justify-between">
-                                                <h1>Web Development</h1>
-
-                                            </div>
-                                            <div class="progress transition duration-3000 bg-black rounded-full h-2 shadow drop-shadow-xl shadow-black"
-                                                role="progressbar" aria-valuenow="90" aria-valuemin="0"
-                                                aria-valuemax="100" style="width: 90%;"></div>
-                                        </div>
-                                        <div class=" my-10 flex flex-col">
-                                            <div class="flex justify-between">
-                                                <h1>MongoDB, MySQL</h1>
-
-                                            </div>
-                                            <div class="progress transition duration-3000 bg-blue-900 rounded-full h-2 shadow drop-shadow-xl shadow-black"
-                                                role="progressbar" aria-valuenow="85" aria-valuemin="0"
-                                                aria-valuemax="100" style="width: 85%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div role="tabpanel" id="panel-2"
-                                class="absolute top-0 invisible opacity-0 tab-panel p-2 transition duration-300 w-auto my-1/2">
-                                <div id="experienceContent" class="relative flex flex-wrap mx-23 my-[10%] gap-10">
-                                    <div class="mx-6">
-                                        <h1 class="py-4 text-3xl">Web Development Intern</h1>
-                                        <span>July 2024 - Present</span>
-                                        <h3>Nullclass</h3>
-
-                                    </div>
-                                    <div class="mx-6">
-                                        <h1 class="py-4 text-3xl">AI Intern</h1>
-                                        <span>Nov 2023 - Dec 2023</span>
-                                        <h3>Inventrom Pvt. Ltd.</h3>
-                                    </div>
-                                </div>
-                            </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <div class="text-sm text-[var(--text-secondary)]">Email</div>
+                            <a href="mailto:chiragworks005@gmail.com" class="font-medium hover:text-[var(--accent)] transition-colors">chiragworks005@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item border-none">
+                        <div class="contact-info-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <div class="text-sm text-[var(--text-secondary)]">Phone</div>
+                            <a href="tel:+918182831488" class="font-medium hover:text-[var(--accent)] transition-colors">+91 8182831488</a>
                         </div>
                     </div>
                 </div>
+
+                <!-- Form -->
+                <div>
+                    <form action="https://formspree.io/f/mqkrvyqj" method="POST" class="contact-form space-y-4">
+                        <div>
+                            <label class="block text-sm text-[var(--text-secondary)] mb-1">Name</label>
+                            <input type="text" name="name" required placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-sm text-[var(--text-secondary)] mb-1">Email</label>
+                            <input type="email" name="_replyto" required placeholder="john@example.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm text-[var(--text-secondary)] mb-1">Message</label>
+                            <textarea name="message" required placeholder="Hello Chirag..."></textarea>
+                        </div>
+                        <button type="submit" class="hero-cta cta-primary w-full justify-center mt-4">
+                            Send Message <i class="fa-solid fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
-
-        </div>
-        </div>
-        <div class="flex relative justify-center self-center 
-            lg:mt-[3rem]
-            md:mt-[2rem]" data-aos="fade-up" data-aos-duration="1000">
-
-            <!-- <button class="rainbowbtn flex py-2 px-5 rounded font-extrabold
-    relative hover:scale-110 ease-in-out duration-300 group shadow-lg shadow-black ">
-                <a href="#Certificates">
-                    My Certifications
-                </a>
-            </button> -->
-        </div>
-        </div>
         </div>
     </section>
 
-    <section id="Certificates" class="h-auto ">
-        <div class="">
-            <div class="lg: my-25
-            md: my-15
-            sm: my-3">
-                <h1 class="headingnames font-lato justify-center flex fade-in  
-            lg:text-[4rem]  
-        sm:text-[2rem]" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    My Certifications
-                </h1>
-            </div>
-            <div class="w-[90%] p-4 border-2 border-gray-600 justify-center items-center mx-auto my-24 h-[32rem] overflow-hidden overflow-y-auto shadow-md shadow-black
-            "
-                data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+    <footer class="footer">
+        <p>&copy; 2025 Chirag Jiwnani. Built with Tailwind CSS.</p>
+    </footer>
 
-                <!-- <div id="certificatebox "
-                    class="flex items-center p-4 mb-4 darkcolor text-yellow-800 border-t-4 border-yellow-300 bg-yellow-50 dark:text-yellow-400 dark:border-yellow-800 text-2xl rounded-full"
-                    role="alert">
-                    <svg class="my-2 mx-12 " width="150px" height="120px" version="1.1" id="Layer_1"
-                        xmlns:x="ns_extend;" xmlns:i="ns_ai;" xmlns:graph="ns_graphs;"
-                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                        viewBox="0 0 351.5 89" style="enable-background:new 0 0 351.5 89;" xml:space="preserve">
-                        <style type="text/css">
-                            .st0 {
-                                fill: #000006;
-                            }
-                        </style>
-                        <metadata>
-                            <sfw xmlns="ns_sfw;">
-                                <slices>
-                                </slices>
-                                <sliceSourceBounds bottomLeftOrigin="true" height="89" width="351.5" x="563.1" y="5.9">
-                                </sliceSourceBounds>
-                            </sfw>
-                        </metadata>
-                        <g>
-                            <g>
-                                <path class="st0" d="M128.3,31.1l0.6-2.2c0.1-0.2,0.2-0.3,0.4-0.3h5.1c0.2,0,0.3,0.1,0.3,0.3v42.1c0,0.2-0.1,0.3-0.3,0.3h-5.9
-                           c-0.2,0-0.3-0.1-0.3-0.3V57c0-0.2-0.3-0.3-0.5-0.2c-0.3,0.3-3.3,3.2-8.4,3.2c-8.4,0-14.2-6.5-14.2-16s5.5-16,14.2-16
-                           c3,0,6.6,1.6,8.2,3.2C127.9,31.5,128.2,31.5,128.3,31.1z M120.3,54.1c5.1,0,7.9-3.8,7.9-10c0-5.9-2.8-10.1-7.9-10.1
-                           c-5.5,0-8.6,4.2-8.6,10.1S114.8,54.1,120.3,54.1z">
-                                </path>
-                                <path class="st0"
-                                    d="M152.5,60.1c-9.2,0-13-6.6-13-14.4V29c0-0.2,0.1-0.3,0.3-0.3h6c0.2,0,0.3,0.1,0.3,0.3v16.6
-                           c0,4.1,2,8.4,7.4,8.4c4.9,0,7.4-3.9,7.4-8.1V29c0-0.2,0.1-0.3,0.3-0.3h5.9c0.2,0,0.3,0.1,0.3,0.3v30.1c0,0.2-0.1,0.3-0.3,0.3h-5.1
-                           c-0.2,0-0.3-0.1-0.4-0.3l-0.6-2.3c-0.1-0.3-0.5-0.2-0.7-0.1C158.9,58.4,155.8,60.1,152.5,60.1z">
-                                </path>
-                                <path class="st0" d="M183.9,60.1c-8.2,0-12.1-4.1-12.1-9.7c0-5.3,4.4-9.5,13.3-9.5h6.3c1.3,0,1.9-1,1.9-1.7c0-1.9-0.5-5-7.1-5
-                           c-4.9,0-6.8,2.2-6.8,4.7c0,0.2-0.1,0.3-0.3,0.3h-5.9c-0.2,0-0.3-0.1-0.3-0.3c0-7.2,6.3-10.7,13.4-10.7c8.4,0,13.6,3.8,13.6,11.3
-                           v12.5c0,1.1,0.9,2,2.1,2h1.4c0.2,0,0.3,0.1,0.3,0.3v5c0,0.2-0.1,0.3-0.3,0.3h-2.4c-3.3,0-5.1-1-6.2-2.9c-0.1-0.2-0.3-0.2-0.5-0.1
-                           C192.6,58,189.1,60.1,183.9,60.1z M193.3,46.8v-0.4c0-0.2-0.1-0.3-0.3-0.3h-7.7c-6,0-7,2.4-7,4.3c0,1.7,1.4,3.8,5.6,3.8
-                           C190.7,54.1,193.2,50.2,193.3,46.8z">
-                                </path>
-                                <path class="st0"
-                                    d="M222.8,28.1c9.2,0,13,6.6,13,14.4v16.6c0,0.2-0.1,0.3-0.3,0.3h-6c-0.2,0-0.3-0.1-0.3-0.3V42.4
-                           c0-4.1-2-8.4-7.4-8.4c-4.9,0-7.4,3.9-7.4,8.1v16.9c0,0.2-0.1,0.3-0.3,0.3h-5.9c-0.2,0-0.3-0.1-0.3-0.3V29c0-0.2,0.1-0.3,0.3-0.3
-                           h5.1c0.2,0,0.3,0.1,0.4,0.3l0.6,2.3c0.1,0.3,0.5,0.2,0.7,0.1C216.4,29.8,219.5,28.1,222.8,28.1z">
-                                </path>
-                                <path class="st0" d="M238.2,34.1c-0.2,0-0.3-0.1-0.3-0.3V29c0-0.2,0.1-0.3,0.3-0.3h5.2c0.2,0,0.3-0.1,0.3-0.3v-8.2
-                           c0-0.2,0.1-0.3,0.3-0.3h6c0.2,0,0.3,0.1,0.3,0.3v8.2c0,0.2,0.1,0.3,0.3,0.3h6.4c0.2,0,0.3,0.1,0.3,0.3v4.8c0,0.2-0.1,0.3-0.3,0.3
-                           h-6.4c-0.2,0-0.3,0.1-0.3,0.3V51c0,1.5,0.9,2.5,2.7,2.5h3.9c0.2,0,0.3,0.1,0.3,0.3v5.3c0,0.2-0.1,0.3-0.3,0.3h-4.7
-                           c-6.1,0-8.5-2.5-8.5-8.6V34.4c0-0.2-0.1-0.3-0.3-0.3H238.2z">
-                                </path>
-                                <path class="st0"
-                                    d="M286.8,60.1c-9.2,0-13-6.6-13-14.4V29c0-0.2,0.1-0.3,0.3-0.3h6c0.2,0,0.3,0.1,0.3,0.3v16.6
-                           c0,4.1,2,8.4,7.4,8.4c4.9,0,7.4-3.9,7.4-8.1V29c0-0.2,0.1-0.3,0.3-0.3h5.9c0.2,0,0.3,0.1,0.3,0.3v30.1c0,0.2-0.1,0.3-0.3,0.3h-5.1
-                           c-0.2,0-0.3-0.1-0.4-0.3l-0.6-2.3c-0.1-0.3-0.5-0.2-0.7-0.1C293.2,58.4,290.1,60.1,286.8,60.1z">
-                                </path>
-                                <path class="st0" d="M345.3,59.4c-0.2,0-0.3-0.1-0.3-0.3V42.3c0-4.1-1.1-8.3-6.2-8.3c-4.9,0-6.1,3.8-6.1,8.3v16.8
-                           c0,0.2-0.2,0.3-0.3,0.3h-6c-0.2,0-0.3-0.1-0.3-0.3V42.3c0-4.2-1.2-8.3-6.1-8.3c-4.6,0-6.1,3.8-6.1,8.3v16.8c0,0.2-0.1,0.3-0.3,0.3
-                           h-5.9c-0.2,0-0.3-0.1-0.3-0.3V29c0-0.2,0.1-0.3,0.3-0.3h5.1c0.2,0,0.3,0.1,0.4,0.3l0.6,2.2c0.1,0.3,0.4,0.3,0.7,0.1
-                           c1.4-1.6,4.4-3.3,7.3-3.3c3.9,0,6.1,1.2,8.3,3.6c0.1,0.1,0.3,0.2,0.6,0c2.1-2.2,5.2-3.6,8.6-3.6c7.8,0,12.1,4.8,12.1,14.1v16.9
-                           c0,0.2-0.1,0.3-0.3,0.3L345.3,59.4L345.3,59.4z">
-                                </path>
-                                <g>
-                                    <path class="st0" d="M262.6,59.4c-0.2,0-0.3-0.1-0.3-0.3V29c0-0.2,0.1-0.3,0.3-0.3h5.9c0.2,0,0.3,0.1,0.3,0.3v30.1
-                               c0,0.2-0.1,0.3-0.3,0.3L262.6,59.4L262.6,59.4z">
-                                    </path>
-                                    <circle class="st0" cx="265.6" cy="20.8" r="3.9">
-                                    </circle>
-                                </g>
-                            </g>
-                            <path class="st0" d="M44.3,0C19.8,0,0,19.8,0,44.3s19.8,44.3,44.3,44.3s44.3-19.8,44.3-44.3S68.7,0,44.3,0z M32.5,56.1
-                       c-6.5-6.5-6.5-17,0-23.5s17-6.5,23.5,0s6.5,17,0,23.5C49.5,62.5,39,62.5,32.5,56.1z M65.8,74.1c-4.6,0-8.3-3.7-8.3-8.3
-                       s3.7-8.3,8.3-8.3s8.3,3.7,8.3,8.3C74.1,70.4,70.4,74.1,65.8,74.1z">
-                            </path>
-                            <path class="st0" d="M83.4,77.9c-3.1,0-5.5,2.5-5.5,5.5c0,3.1,2.5,5.5,5.5,5.5c3.1,0,5.5-2.5,5.5-5.5C89,80.4,86.5,77.9,83.4,77.9z
-                       ">
-                            </path>
-                        </g>
-                    </svg>
+    <!-- Back to top -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
-                    <a class="flex text-center" href="./assets/images/Quantium_completion_certificate.pdf">
-                        Quantium - Data Analytics</a>
-                    <button type="button"
-                        class="ms-auto -mx-1.5 -my-1.5 bg-yellow-50 text-yellow-500 rounded-lg focus:ring-2 focus:ring-yellow-400 p-1.5 hover:bg-yellow-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-yellow-400 dark:hover:bg-gray-700"
-                        data-dismiss-target="#alert-border-1" aria-label="Close">
-                        <span class="sr-only">Dismiss</span>
-                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 14 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                        </svg>
-                    </button>
-                </div> -->
-
-                <div id="certificatebox "
-                    class="flex items-center p-4 mb-4 darkcolor text-gray-800 border-t-4 border-gray-300 bg-gray-50 dark:text-gray-400 dark:border-gray-800 rounded-full
-                    flex-wrap
-                    justify-center
-                    lg:text-2xl
-                    md:text-lg"
-                    role="alert">
-                    <svg class="my-2 mx-12 " width="150px" height="120px" version="1.1" id="Layer_1"
-                        xmlns:x="ns_extend;" xmlns:i="ns_ai;" xmlns:graph="ns_graphs;"
-                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                        viewBox="0 0 351.5 89" style="enable-background:new 0 0 351.5 89;" xml:space="preserve">
-                        <style type="text/css">
-                            .st0 {
-                                fill: #000006;
-                            }
-                        </style>
-                        <metadata>
-                            <sfw xmlns="ns_sfw;">
-                                <slices>
-                                </slices>
-                                <sliceSourceBounds bottomLeftOrigin="true" height="89" width="351.5" x="563.1" y="5.9">
-                                </sliceSourceBounds>
-                            </sfw>
-                        </metadata>
-                        <g>
-                            <g>
-                                <path class="st0" d="M128.3,31.1l0.6-2.2c0.1-0.2,0.2-0.3,0.4-0.3h5.1c0.2,0,0.3,0.1,0.3,0.3v42.1c0,0.2-0.1,0.3-0.3,0.3h-5.9
-                               c-0.2,0-0.3-0.1-0.3-0.3V57c0-0.2-0.3-0.3-0.5-0.2c-0.3,0.3-3.3,3.2-8.4,3.2c-8.4,0-14.2-6.5-14.2-16s5.5-16,14.2-16
-                               c3,0,6.6,1.6,8.2,3.2C127.9,31.5,128.2,31.5,128.3,31.1z M120.3,54.1c5.1,0,7.9-3.8,7.9-10c0-5.9-2.8-10.1-7.9-10.1
-                               c-5.5,0-8.6,4.2-8.6,10.1S114.8,54.1,120.3,54.1z">
-                                </path>
-                                <path class="st0"
-                                    d="M152.5,60.1c-9.2,0-13-6.6-13-14.4V29c0-0.2,0.1-0.3,0.3-0.3h6c0.2,0,0.3,0.1,0.3,0.3v16.6
-                               c0,4.1,2,8.4,7.4,8.4c4.9,0,7.4-3.9,7.4-8.1V29c0-0.2,0.1-0.3,0.3-0.3h5.9c0.2,0,0.3,0.1,0.3,0.3v30.1c0,0.2-0.1,0.3-0.3,0.3h-5.1
-                               c-0.2,0-0.3-0.1-0.4-0.3l-0.6-2.3c-0.1-0.3-0.5-0.2-0.7-0.1C158.9,58.4,155.8,60.1,152.5,60.1z">
-                                </path>
-                                <path class="st0" d="M183.9,60.1c-8.2,0-12.1-4.1-12.1-9.7c0-5.3,4.4-9.5,13.3-9.5h6.3c1.3,0,1.9-1,1.9-1.7c0-1.9-0.5-5-7.1-5
-                               c-4.9,0-6.8,2.2-6.8,4.7c0,0.2-0.1,0.3-0.3,0.3h-5.9c-0.2,0-0.3-0.1-0.3-0.3c0-7.2,6.3-10.7,13.4-10.7c8.4,0,13.6,3.8,13.6,11.3
-                               v12.5c0,1.1,0.9,2,2.1,2h1.4c0.2,0,0.3,0.1,0.3,0.3v5c0,0.2-0.1,0.3-0.3,0.3h-2.4c-3.3,0-5.1-1-6.2-2.9c-0.1-0.2-0.3-0.2-0.5-0.1
-                               C192.6,58,189.1,60.1,183.9,60.1z M193.3,46.8v-0.4c0-0.2-0.1-0.3-0.3-0.3h-7.7c-6,0-7,2.4-7,4.3c0,1.7,1.4,3.8,5.6,3.8
-                               C190.7,54.1,193.2,50.2,193.3,46.8z">
-                                </path>
-                                <path class="st0"
-                                    d="M222.8,28.1c9.2,0,13,6.6,13,14.4v16.6c0,0.2-0.1,0.3-0.3,0.3h-6c-0.2,0-0.3-0.1-0.3-0.3V42.4
-                               c0-4.1-2-8.4-7.4-8.4c-4.9,0-7.4,3.9-7.4,8.1v16.9c0,0.2-0.1,0.3-0.3,0.3h-5.9c-0.2,0-0.3-0.1-0.3-0.3V29c0-0.2,0.1-0.3,0.3-0.3
-                               h5.1c0.2,0,0.3,0.1,0.4,0.3l0.6,2.3c0.1,0.3,0.5,0.2,0.7,0.1C216.4,29.8,219.5,28.1,222.8,28.1z">
-                                </path>
-                                <path class="st0" d="M238.2,34.1c-0.2,0-0.3-0.1-0.3-0.3V29c0-0.2,0.1-0.3,0.3-0.3h5.2c0.2,0,0.3-0.1,0.3-0.3v-8.2
-                               c0-0.2,0.1-0.3,0.3-0.3h6c0.2,0,0.3,0.1,0.3,0.3v8.2c0,0.2,0.1,0.3,0.3,0.3h6.4c0.2,0,0.3,0.1,0.3,0.3v4.8c0,0.2-0.1,0.3-0.3,0.3
-                               h-6.4c-0.2,0-0.3,0.1-0.3,0.3V51c0,1.5,0.9,2.5,2.7,2.5h3.9c0.2,0,0.3,0.1,0.3,0.3v5.3c0,0.2-0.1,0.3-0.3,0.3h-4.7
-                               c-6.1,0-8.5-2.5-8.5-8.6V34.4c0-0.2-0.1-0.3-0.3-0.3H238.2z">
-                                </path>
-                                <path class="st0"
-                                    d="M286.8,60.1c-9.2,0-13-6.6-13-14.4V29c0-0.2,0.1-0.3,0.3-0.3h6c0.2,0,0.3,0.1,0.3,0.3v16.6
-                               c0,4.1,2,8.4,7.4,8.4c4.9,0,7.4-3.9,7.4-8.1V29c0-0.2,0.1-0.3,0.3-0.3h5.9c0.2,0,0.3,0.1,0.3,0.3v30.1c0,0.2-0.1,0.3-0.3,0.3h-5.1
-                               c-0.2,0-0.3-0.1-0.4-0.3l-0.6-2.3c-0.1-0.3-0.5-0.2-0.7-0.1C293.2,58.4,290.1,60.1,286.8,60.1z">
-                                </path>
-                                <path class="st0" d="M345.3,59.4c-0.2,0-0.3-0.1-0.3-0.3V42.3c0-4.1-1.1-8.3-6.2-8.3c-4.9,0-6.1,3.8-6.1,8.3v16.8
-                               c0,0.2-0.2,0.3-0.3,0.3h-6c-0.2,0-0.3-0.1-0.3-0.3V42.3c0-4.2-1.2-8.3-6.1-8.3c-4.6,0-6.1,3.8-6.1,8.3v16.8c0,0.2-0.1,0.3-0.3,0.3
-                               h-5.9c-0.2,0-0.3-0.1-0.3-0.3V29c0-0.2,0.1-0.3,0.3-0.3h5.1c0.2,0,0.3,0.1,0.4,0.3l0.6,2.2c0.1,0.3,0.4,0.3,0.7,0.1
-                               c1.4-1.6,4.4-3.3,7.3-3.3c3.9,0,6.1,1.2,8.3,3.6c0.1,0.1,0.3,0.2,0.6,0c2.1-2.2,5.2-3.6,8.6-3.6c7.8,0,12.1,4.8,12.1,14.1v16.9
-                               c0,0.2-0.1,0.3-0.3,0.3L345.3,59.4L345.3,59.4z">
-                                </path>
-                                <g>
-                                    <path class="st0" d="M262.6,59.4c-0.2,0-0.3-0.1-0.3-0.3V29c0-0.2,0.1-0.3,0.3-0.3h5.9c0.2,0,0.3,0.1,0.3,0.3v30.1
-                                   c0,0.2-0.1,0.3-0.3,0.3L262.6,59.4L262.6,59.4z">
-                                    </path>
-                                    <circle class="st0" cx="265.6" cy="20.8" r="3.9">
-                                    </circle>
-                                </g>
-                            </g>
-                            <path class="st0" d="M44.3,0C19.8,0,0,19.8,0,44.3s19.8,44.3,44.3,44.3s44.3-19.8,44.3-44.3S68.7,0,44.3,0z M32.5,56.1
-                           c-6.5-6.5-6.5-17,0-23.5s17-6.5,23.5,0s6.5,17,0,23.5C49.5,62.5,39,62.5,32.5,56.1z M65.8,74.1c-4.6,0-8.3-3.7-8.3-8.3
-                           s3.7-8.3,8.3-8.3s8.3,3.7,8.3,8.3C74.1,70.4,70.4,74.1,65.8,74.1z">
-                            </path>
-                            <path class="st0" d="M83.4,77.9c-3.1,0-5.5,2.5-5.5,5.5c0,3.1,2.5,5.5,5.5,5.5c3.1,0,5.5-2.5,5.5-5.5C89,80.4,86.5,77.9,83.4,77.9z
-                           ">
-                            </path>
-                        </g>
-                    </svg>
-
-                    <a class="flex text-center" href="./assets/images/Quantium_completion_certificate.pdf">
-                        Quantium - Data Analytics</a>
-
-                </div>
-
-                <div id="certificatebox "
-                    class="flex items-center p-4 mb-4 darkcolor text-yellow-800 border-t-4 border-yellow-300 bg-yellow-50 dark:text-yellow-400 dark:border-yellow-800 rounded-full
-                    flex-wrap
-                    justify-center
-                    lg:text-2xl
-                    md:text-lg
-                    "
-                    role="alert">
-                    <svg class="my-2 mx-12 " width="70px" height="120px" viewBox="0 0 1000 758.99463"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/"
-                        xmlns:cc="http://creativecommons.org/ns#"
-                        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-                        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="1200"
-                        height="910.79" id="svg2" inkscape:version="0.47 r22583" sodipodi:docname="pwc.svg">
-                        <SCRIPT xmlns="" id="allow-copy_script" />
-                        <metadata id="metadata2892">
-                            <rdf:RDF>
-                                <cc:Work rdf:about="">
-                                    <dc:format>image/svg+xml</dc:format>
-                                    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-                                </cc:Work>
-                            </rdf:RDF>
-                        </metadata>
-                        <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1"
-                            objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0"
-                            inkscape:pageshadow="2" inkscape:window-width="1280" inkscape:window-height="725"
-                            id="namedview2890" showgrid="false" inkscape:zoom="0.62582788" inkscape:cx="500"
-                            inkscape:cy="379.49731" inkscape:window-x="-9" inkscape:window-y="-9"
-                            inkscape:window-maximized="1" inkscape:current-layer="svg2" />
-                        <defs id="defs4">
-                            <inkscape:perspective sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 379.49731 : 1"
-                                inkscape:vp_y="0 : 1000 : 0" inkscape:vp_z="1000 : 379.49731 : 1"
-                                inkscape:persp3d-origin="500 : 252.99821 : 1" id="perspective2894" />
-                            <clipPath id="clipPath2940">
-                                <path d="m 104.072,244.53 13.958,0 0,-16.389 -13.958,0 0,16.389 z" id="path2942" />
-                            </clipPath>
-                            <clipPath id="clipPath2926">
-                                <path d="m 104.072,254.114 34.584,0 0,-25.973 -34.584,0 0,25.973 z" id="path2928" />
-                            </clipPath>
-                            <clipPath id="clipPath2912">
-                                <path d="m 104.072,263.695 21.122,0 0,-35.554 -21.122,0 0,35.554 z" id="path2914" />
-                            </clipPath>
-                            <clipPath id="clipPath2898">
-                                <path d="m 104.072,259.95 24.884,0 0,-31.809 -24.884,0 0,31.809 z" id="path2900" />
-                            </clipPath>
-                            <clipPath id="clipPath2884">
-                                <path d="m 104.072,239.726 39.448,0 0,-11.585 -39.448,0 0,11.585 z" id="path2886" />
-                            </clipPath>
-                            <clipPath id="clipPath2872">
-                                <path d="m 0,0 595.276,0 0,841.89 L 0,841.89 0,0 z" id="path2874" />
-                            </clipPath>
-                            <clipPath id="clipPath2852">
-                                <path d="m 39.118,37.134 28.126,0 0,26.954 -28.126,0 0,-26.954 z" id="path2854" />
-                            </clipPath>
-                            <clipPath id="clipPath4109">
-                                <path d="m 104.072,244.53 13.958,0 0,-16.389 -13.958,0 0,16.389 z" id="path4111" />
-                            </clipPath>
-                            <clipPath id="clipPath4095">
-                                <path d="m 104.072,254.114 34.584,0 0,-25.973 -34.584,0 0,25.973 z" id="path4097" />
-                            </clipPath>
-                            <clipPath id="clipPath4081">
-                                <path d="m 104.072,263.695 21.122,0 0,-35.554 -21.122,0 0,35.554 z" id="path4083" />
-                            </clipPath>
-                            <clipPath id="clipPath4067">
-                                <path d="m 104.072,259.95 24.884,0 0,-31.809 -24.884,0 0,31.809 z" id="path4069" />
-                            </clipPath>
-                            <clipPath id="clipPath4053">
-                                <path d="m 104.072,239.726 39.448,0 0,-11.585 -39.448,0 0,11.585 z" id="path4055" />
-                            </clipPath>
-                            <clipPath id="clipPath4041">
-                                <path d="m 0,0 595.276,0 0,841.89 L 0,841.89 0,0 z" id="path4043" />
-                            </clipPath>
-                            <clipPath id="clipPath4021">
-                                <path d="m 39.118,37.134 28.126,0 0,26.954 -28.126,0 0,-26.954 z" id="path4023" />
-                            </clipPath>
-                            <clipPath id="clipPath4041-7">
-                                <path d="m 0,0 595.276,0 0,841.89 L 0,841.89 0,0 z" id="path4043-1" />
-                            </clipPath>
-                            <clipPath id="clipPath4053-7">
-                                <path d="m 104.072,239.726 39.448,0 0,-11.585 -39.448,0 0,11.585 z" id="path4055-7" />
-                            </clipPath>
-                            <clipPath id="clipPath4067-7">
-                                <path d="m 104.072,259.95 24.884,0 0,-31.809 -24.884,0 0,31.809 z" id="path4069-7" />
-                            </clipPath>
-                            <clipPath id="clipPath4081-3">
-                                <path d="m 104.072,263.695 21.122,0 0,-35.554 -21.122,0 0,35.554 z" id="path4083-3" />
-                            </clipPath>
-                            <clipPath id="clipPath4095-5">
-                                <path d="m 104.072,254.114 34.584,0 0,-25.973 -34.584,0 0,25.973 z" id="path4097-9" />
-                            </clipPath>
-                            <clipPath id="clipPath4109-9">
-                                <path d="m 104.072,244.53 13.958,0 0,-16.389 -13.958,0 0,16.389 z" id="path4111-8" />
-                            </clipPath>
-                            <inkscape:perspective id="perspective2938" inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-                                inkscape:vp_z="1 : 0.5 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 0.5 : 1"
-                                sodipodi:type="inkscape:persp3d" />
-                            <inkscape:perspective id="perspective2997" inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-                                inkscape:vp_z="1 : 0.5 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 0.5 : 1"
-                                sodipodi:type="inkscape:persp3d" />
-                            <inkscape:perspective id="perspective3018" inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-                                inkscape:vp_z="1 : 0.5 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 0.5 : 1"
-                                sodipodi:type="inkscape:persp3d" />
-                            <inkscape:perspective id="perspective3039" inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-                                inkscape:vp_z="1 : 0.5 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 0.5 : 1"
-                                sodipodi:type="inkscape:persp3d" />
-                            <inkscape:perspective id="perspective3060" inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-                                inkscape:vp_z="1 : 0.5 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 0.5 : 1"
-                                sodipodi:type="inkscape:persp3d" />
-                            <inkscape:perspective id="perspective3081" inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-                                inkscape:vp_z="1 : 0.5 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 0.5 : 1"
-                                sodipodi:type="inkscape:persp3d" />
-                            <inkscape:perspective id="perspective3102" inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-                                inkscape:vp_z="1 : 0.5 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 0.5 : 1"
-                                sodipodi:type="inkscape:persp3d" />
-                            <inkscape:perspective id="perspective3123" inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-                                inkscape:vp_z="1 : 0.5 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 0.5 : 1"
-                                sodipodi:type="inkscape:persp3d" />
-                            <inkscape:perspective id="perspective3144" inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-                                inkscape:vp_z="1 : 0.5 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 0.5 : 1"
-                                sodipodi:type="inkscape:persp3d" />
-                            <inkscape:perspective id="perspective3165" inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-                                inkscape:vp_z="1 : 0.5 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 0.5 : 1"
-                                sodipodi:type="inkscape:persp3d" />
-                            <inkscape:perspective id="perspective3186" inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-                                inkscape:vp_z="1 : 0.5 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 0.5 : 1"
-                                sodipodi:type="inkscape:persp3d" />
-                            <inkscape:perspective id="perspective3207" inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-                                inkscape:vp_z="1 : 0.5 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 0.5 : 1"
-                                sodipodi:type="inkscape:persp3d" />
-                            <inkscape:perspective id="perspective3228" inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-                                inkscape:vp_z="1 : 0.5 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 0.5 : 1"
-                                sodipodi:type="inkscape:persp3d" />
-                            <inkscape:perspective id="perspective3249" inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-                                inkscape:vp_z="1 : 0.5 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 0.5 : 1"
-                                sodipodi:type="inkscape:persp3d" />
-                            <inkscape:perspective id="perspective2840" inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-                                inkscape:vp_z="1 : 0.5 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 0.5 : 1"
-                                sodipodi:type="inkscape:persp3d" />
-                        </defs>
-                        <path d="m 1000,325.90288 -363.73536,0 0,-93.09988 363.73536,0 0,93.09988 z" id="path4061"
-                            style="fill:#e669a2;fill-opacity:1;fill-rule:nonzero;stroke:none;color:#000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-                        <path d="m 952.75557,325.90288 -316.49093,0 0,-232.851606 316.49093,0 0,232.851606 z"
-                            id="path4103"
-                            style="fill:#f3be26;fill-opacity:1;fill-rule:nonzero;stroke:none;color:#000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-                        <path
-                            d="m 821.99817,325.90288 -185.73353,0 0,-325.902841381168 185.73353,0 0,325.902841381168 z"
-                            id="path4089"
-                            style="fill:#ee9c34;fill-opacity:1;fill-rule:nonzero;stroke:none;color:#000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-                        <path d="m 858.53875,325.90288 -222.27411,0 0,-289.537091 222.27411,0 0,289.537091 z"
-                            id="path4075"
-                            style="fill:#f3bc87;fill-opacity:1;fill-rule:nonzero;stroke:none;color:#000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-                        <path d="m 636.21316,36.420649 0,289.452701 185.76453,0 0,-289.452701 -185.76453,0 z"
-                            id="path4688"
-                            style="fill:#e3721c;fill-opacity:1;fill-rule:nonzero;stroke:none;color:#000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-                        <path d="m 450.0164,325.90296 186.24824,0 0,46.55479 -186.24824,0 0,-46.55479 z" id="path4119"
-                            style="fill:#ad1b02;fill-opacity:1;fill-rule:nonzero;stroke:none;color:#000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-                        <path d="m 636.21316,92.99991 0,232.87344 222.43178,0 0,-232.87344 -222.43178,0 z" id="path4698"
-                            style="fill:#e88d14;fill-opacity:1;fill-rule:nonzero;stroke:none;color:#000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-                        <path d="m 636.21316,92.99991 0,232.87344 185.76453,0 0,-232.87344 -185.76453,0 z" id="path4693"
-                            style="fill:#d85604;fill-opacity:1;fill-rule:nonzero;stroke:none;color:#000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-                        <path d="m 752.41366,325.90288 -116.14902,0 0,-139.76144 116.14902,0 0,139.76144 z"
-                            id="path4117"
-                            style="fill:#c14303;fill-opacity:1;fill-rule:nonzero;stroke:none;color:#000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-                        <path d="m 636.21316,232.86967 0,93.00368 316.6496,0 0,-93.00368 -316.6496,0 z" id="path4713"
-                            style="fill:#db4e18;fill-opacity:1;fill-rule:nonzero;stroke:none;color:#000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-                        <path d="m 636.21316,232.86967 0,93.00368 222.43178,0 0,-93.00368 -222.43178,0 z" id="path4708"
-                            style="fill:#d1390d;fill-opacity:1;fill-rule:nonzero;stroke:none;color:#000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-                        <path d="m 636.21316,232.86967 0,93.00368 185.76453,0 0,-93.00368 -185.76453,0 z" id="path4703"
-                            style="fill:#c22303;fill-opacity:1;fill-rule:nonzero;stroke:none;color:#000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-                        <path d="m 636.21316,232.86967 0,93.00368 116.31531,0 0,-93.00368 -116.31531,0 z" id="path4625"
-                            style="fill:#ad1b02;fill-opacity:1;fill-rule:nonzero;stroke:none;color:#000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-                        <g transform="translate(-128.49892,323.79178)" id="g2925">
-                            <path id="path2850" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-                                d="m 805.25948,177.45637 c -31.69014,5.6338 -48.59155,29.57747 -48.59155,71.12676 0,42.25352 22.53522,70.42254 55.63381,70.42254 16.19718,0 30.28169,-5.63381 59.85915,-20.42254 0,34.50704 0,34.50704 0,34.50704 -35.91549,16.90141 -57.04225,21.12676 -85.21127,21.12676 -31.69014,0 -54.22535,-7.74647 -71.83098,-26.76056 -18.30986,-18.30986 -28.16902,-42.25352 -28.16902,-69.71831 0,-59.85915 45.07043,-101.40845 110.56338,-101.40845 42.95775,0 73.23944,20.42254 73.23944,49.29578 0,19.01408 -14.08451,32.39436 -34.50704,32.39436 -10.56338,0 -19.01409,-3.52113 -30.98592,-9.85915" />
-                            <path id="path2852" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-                                d="m 646.80878,257.73806 c 28.87324,-35.91549 39.43662,-50.70422 39.43662,-68.30986 0,-17.60563 -14.08451,-33.09859 -33.80282,-33.09859 -11.2676,0 -21.83098,6.33803 -26.76056,11.97183 0,73.94366 0,73.94366 0,73.94366 -47.1831,63.38029 -47.1831,63.38029 -47.1831,63.38029 0,-143.66198 0,-143.66198 0,-143.66198 -45.07042,0 -45.07042,0 -45.07042,0 -74.64789,123.23944 -74.64789,123.23944 -74.64789,123.23944 0,-123.23944 0,-123.23944 0,-123.23944 -25.35211,0 -25.35211,0 -25.35211,0 -68.30986,15.49296 -68.30986,15.49296 -68.30986,15.49296 0,17.60563 0,17.60563 0,17.60563 37.32394,3.52113 37.32394,3.52113 37.32394,3.52113 0,152.8169 0,152.8169 0,152.8169 47.1831,0 47.1831,0 47.1831,0 71.83099,-118.30986 71.83099,-118.30986 71.83099,-118.30986 0,118.30986 0,118.30986 0,118.30986 52.8169,0 52.8169,0 52.8169,0" />
-                            <path id="path2862" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-                                d="m 222.16089,327.45637 c 5.6338,0 7.04226,0 10.56338,0 38.02817,0 59.15493,-23.23944 59.15493,-69.71831 0,-38.73239 -16.90141,-59.85915 -48.59155,-59.85915 -4.22535,0 -10.56338,0.70422 -21.12676,2.8169 l 0,126.76056 z m 0,83.09859 c 30.98592,7.04226 30.98592,7.04226 30.98592,7.04226 0,17.60563 0,17.60563 0,17.60563 -121.83099,0 -121.83099,0 -121.83099,0 0,-17.60563 0,-17.60563 0,-17.60563 28.16902,-7.04226 28.16902,-7.04226 28.16902,-7.04226 0,-212.67605 0,-212.67605 0,-212.67605 -30.98592,0 -30.98592,0 -30.98592,0 0,-17.60564 0,-17.60564 0,-17.60564 73.94366,-22.53521 73.94366,-22.53521 73.94366,-22.53521 19.71831,0 19.71831,0 19.71831,0 0,25.35211 0,25.35211 0,25.35211 34.50704,-21.12676 46.47888,-24.64788 64.78873,-24.64788 40.84507,0 71.83099,38.02817 71.83099,90.84507 0,60.56338 -41.5493,102.11267 -104.92958,102.11267 -7.04225,0 -19.01408,-0.70422 -31.69014,-1.40845" />
-                        </g>
-                    </svg>
-
-                    <a class="flex text-center"
-                        href="./assets/images/PWC_ Data visualisation_completion_certificate.pdf">
-                        PWC - Power BI</a>
-
-                </div>
-
-                <div id="certificatebox "
-                    class="flex items-center p-4 mb-4 darkcolor text-lime-800 border-t-4 border-lime-300 bg-lime-50 dark:text-lime-400 dark:border-lime-800 rounded-full flex-wrap
-                    justify-center
-                    lg:text-2xl
-                    md:text-lg
-                    "
-                    role="alert">
-                    <svg class="my-2 mx-12  min-w-6" width="50px" height="120px" viewBox="-3 0 262 262"
-                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
-                        <path
-                            d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"
-                            fill="#4285F4" />
-                        <path
-                            d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"
-                            fill="#34A853" />
-                        <path
-                            d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782"
-                            fill="#FBBC05" />
-                        <path
-                            d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"
-                            fill="#EB4335" />
-                    </svg>
-
-                    Google&nbsp;-<a class="flex text-center"
-                        href="https://www.cloudskillsboost.google/public_profiles/734410b0-6824-44ea-8437-d42e653f0f55/badges/4976311">&nbsp;&nbsp;Generative
-                        AI,&nbsp; </a> <a
-                        href="https://www.cloudskillsboost.google/public_profiles/734410b0-6824-44ea-8437-d42e653f0f55/badges/4980461">
-                        Resposible AI,&nbsp; </a> <a
-                        href="https://www.cloudskillsboost.google/public_profiles/734410b0-6824-44ea-8437-d42e653f0f55/badges/4976862">LLM</a>
-
-
-                </div>
-
-                <div id="certificatebox"
-                    class="flex items-center p-4 mb-4 darkcolor text-blue-800 border-t-4 border-blue-300 bg-blue-50 dark:text-blue-400 dark:border-blue-800 rounded-full
-                    flex-wrap
-                    justify-center
-                    lg:text-2xl
-                    md:text-lg"
-                    role="alert">
-
-                    <svg class="my-2 mx-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 235.44 231.12" id="tata"
-                        width="100" height="120">
-                        <polygon fill="#2f2e2e" fill-rule="evenodd"
-                            points="12.28 24.08 205.04 24.08 205.04 216.84 12.28 216.84 12.28 24.08 12.28 24.08">
-                        </polygon>
-                        <polygon fill="#2e3192" fill-rule="evenodd"
-                            points="23.8 152.99 60.38 152.99 60.38 163.84 48.99 163.84 48.99 195.78 35.2 195.78 35.2 163.84 23.8 163.84 23.8 152.99 23.8 152.99">
-                        </polygon>
-                        <polygon fill="#2e3192" fill-rule="evenodd"
-                            points="107.76 152.99 144.34 152.99 144.34 163.84 132.94 163.84 132.94 195.78 119.15 195.78 119.15 163.84 107.76 163.84 107.76 152.99 107.76 152.99">
-                        </polygon>
-                        <polygon fill="#2e3192" fill-rule="evenodd"
-                            points="59.18 195.78 74.78 152.99 92.17 152.99 109.56 195.78 93.97 195.78 84.37 168.06 74.18 195.78 59.18 195.78 59.18 195.78">
-                        </polygon>
-                        <polygon fill="#2e3192" fill-rule="evenodd"
-                            points="143.14 195.78 158.73 152.99 176.12 152.99 193.51 195.78 177.92 195.78 168.33 168.06 158.13 195.78 143.14 195.78 143.14 195.78">
-                        </polygon>
-                        <path fill="#2e3192" fill-rule="evenodd"
-                            d="M107,42.65c27.78,0,51.76,11.62,62.3,28.19-15.87-4.34-34.24-7.69-53.31-7.05-3,.1-5.4.89-5.4,3.76v69.11c-1.19,0-2.39.07-3.59.07s-2.3,0-3.44-.06V67.55c0-2.87-2.35-3.66-5.4-3.76-19.15-.64-37.59,2.73-53.5,7.1C55.19,54.29,79.19,42.65,107,42.65Zm66.91,38.56A32.94,32.94,0,0,1,175,89.69c0,20.39-18.94,37.83-45.28,44.32L122,81.87c-.64-4.24-.6-7.12,3-7.23C145.22,74,157.1,77,173.91,81.21Zm-89.5,52.84C58,127.58,39,110.12,39,89.69a32.69,32.69,0,0,1,1.11-8.44C57,77.05,68.86,74,89.17,74.64c3.61.11,3.65,3,3,7.23l-7.77,52.18Z">
-                        </path>
-                    </svg>
-                    <a href="./assets/images/TATA forage.pdf" target="_blank">
-                        TATA - Data Visualisation: Empowering Business with Effective Insights
-                    </a>
-                    <div>
-
-                    </div>
-
-
-                </div>
-
-                <div id="certificatebox"
-                    class="flex items-center p-4 mb-4 darkcolor text-green-800 border-t-4 border-green-300 bg-green-50 dark:text-green-400 dark:border-green-800 rounded-full
-                    flex-wrap
-                    justify-center
-                    lg:text-2xl
-                    md:text-lg"
-                    role="alert">
-                    <svg class="my-2 mx-12" width="140px" height="120px" viewBox="0 -406.53 1033.746 1033.746"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M1033.746 99.838v-18.18h-22.576V53.395l-.76.234-21.205 6.488-.418.127v21.415h-33.469v-11.93c0-5.555 1.242-9.806 3.69-12.641 2.431-2.801 5.908-4.225 10.343-4.225 3.188 0 6.489.751 9.811 2.232l.833.372V36.321l-.392-.144c-3.099-1.114-7.314-1.675-12.539-1.675-6.585 0-12.568 1.433-17.786 4.273-5.221 2.844-9.328 6.904-12.205 12.066-2.867 5.156-4.322 11.111-4.322 17.701v13.116h-15.72v18.18h15.72v76.589h22.567V99.838h33.469v48.671c0 20.045 9.455 30.203 28.102 30.203 3.064 0 6.289-.359 9.582-1.062 3.352-.722 5.635-1.443 6.979-2.213l.297-.176v-18.348l-.918.607c-1.225.816-2.75 1.483-4.538 1.979-1.796.505-3.296.758-4.458.758-4.368 0-7.6-1.177-9.605-3.5-2.028-2.344-3.057-6.443-3.057-12.177V99.838h22.575zM866.635 160.26c-8.191 0-14.649-2.716-19.2-8.066-4.579-5.377-6.899-13.043-6.899-22.783 0-10.049 2.32-17.914 6.901-23.386 4.554-5.436 10.95-8.195 19.014-8.195 7.825 0 14.054 2.635 18.516 7.836 4.484 5.228 6.76 13.03 6.76 23.196 0 10.291-2.14 18.196-6.36 23.484-4.191 5.248-10.493 7.914-18.732 7.914m1.003-80.885c-15.627 0-28.039 4.579-36.889 13.61-8.844 9.032-13.328 21.531-13.328 37.153 0 14.838 4.377 26.773 13.011 35.468 8.634 8.698 20.384 13.104 34.921 13.104 15.148 0 27.313-4.643 36.159-13.799 8.845-9.146 13.326-21.527 13.326-36.784 0-15.07-4.205-27.094-12.502-35.731-8.301-8.641-19.977-13.021-34.698-13.021m-86.602 0c-10.63 0-19.423 2.719-26.14 8.08-6.758 5.393-10.186 12.466-10.186 21.025 0 4.449.74 8.401 2.196 11.753 1.465 3.363 3.732 6.324 6.744 8.809 2.989 2.465 7.603 5.047 13.717 7.674 5.14 2.115 8.973 3.904 11.408 5.314 2.38 1.382 4.069 2.771 5.023 4.124.927 1.324 1.397 3.136 1.397 5.372 0 6.367-4.768 9.465-14.579 9.465-3.639 0-7.79-.76-12.337-2.258a46.347 46.347 0 0 1-12.634-6.406l-.937-.672v21.727l.344.16c3.193 1.474 7.219 2.717 11.964 3.695 4.736.979 9.039 1.477 12.777 1.477 11.535 0 20.824-2.732 27.602-8.125 6.821-5.43 10.278-12.67 10.278-21.525 0-6.388-1.861-11.866-5.529-16.284-3.643-4.382-9.966-8.405-18.785-11.961-7.026-2.82-11.527-5.161-13.384-6.958-1.79-1.736-2.699-4.191-2.699-7.3 0-2.756 1.122-4.964 3.425-6.752 2.321-1.797 5.552-2.711 9.604-2.711 3.76 0 7.607.594 11.433 1.758 3.823 1.164 7.181 2.723 9.984 4.63l.922.63v-20.61l-.354-.152c-2.586-1.109-5.996-2.058-10.138-2.828-4.123-.765-7.863-1.151-11.116-1.151m-95.157 80.885c-8.189 0-14.649-2.716-19.199-8.066-4.58-5.377-6.896-13.041-6.896-22.783 0-10.049 2.319-17.914 6.901-23.386 4.55-5.436 10.945-8.195 19.013-8.195 7.822 0 14.051 2.635 18.514 7.836 4.485 5.228 6.76 13.03 6.76 23.196 0 10.291-2.141 18.196-6.361 23.484-4.191 5.248-10.49 7.914-18.732 7.914m1.006-80.885c-15.631 0-28.044 4.579-36.889 13.61-8.844 9.032-13.331 21.531-13.331 37.153 0 14.844 4.38 26.773 13.014 35.468 8.634 8.698 20.383 13.104 34.92 13.104 15.146 0 27.314-4.643 36.16-13.799 8.843-9.146 13.326-21.527 13.326-36.784 0-15.07-4.206-27.094-12.505-35.731-8.303-8.641-19.977-13.021-34.695-13.021M602.409 98.07V81.658h-22.292v94.767h22.292v-48.477c0-8.243 1.869-15.015 5.557-20.13 3.641-5.054 8.493-7.615 14.417-7.615 2.008 0 4.262.331 6.703.986 2.416.651 4.166 1.358 5.198 2.102l.937.679V81.496l-.361-.155c-2.076-.882-5.013-1.327-8.729-1.327-5.602 0-10.615 1.8-14.909 5.344-3.769 3.115-6.493 7.386-8.576 12.712h-.237zm-62.213-18.695c-10.227 0-19.349 2.193-27.108 6.516-7.775 4.333-13.788 10.519-17.879 18.385-4.073 7.847-6.141 17.013-6.141 27.235 0 8.954 2.005 17.171 5.968 24.413 3.965 7.254 9.577 12.929 16.681 16.865 7.094 3.931 15.293 5.924 24.371 5.924 10.594 0 19.639-2.118 26.891-6.295l.293-.168v-20.423l-.937.684c-3.285 2.393-6.956 4.303-10.906 5.679-3.94 1.375-7.532 2.07-10.682 2.07-8.747 0-15.769-2.737-20.866-8.133-5.108-5.403-7.698-12.99-7.698-22.537 0-9.607 2.701-17.389 8.024-23.131 5.307-5.725 12.342-8.629 20.908-8.629 7.327 0 14.467 2.481 21.222 7.381l.935.679V84.371l-.302-.17c-2.542-1.423-6.009-2.598-10.313-3.489-4.286-.889-8.478-1.337-12.461-1.337m-66.481 2.284h-22.292v94.766h22.292V81.659zm-10.918-40.371c-3.669 0-6.869 1.249-9.498 3.724-2.64 2.482-3.979 5.607-3.979 9.295 0 3.63 1.323 6.698 3.938 9.114 2.598 2.409 5.808 3.63 9.54 3.63 3.731 0 6.953-1.221 9.582-3.626 2.646-2.42 3.988-5.487 3.988-9.118 0-3.559-1.306-6.652-3.879-9.195-2.571-2.538-5.833-3.824-9.692-3.824m-55.62 33.379v101.758h22.75V44.189H398.44l-40.022 98.221-38.839-98.221H286.81v132.235h21.379V74.657h.734l41.013 101.768h16.134l40.373-101.758h.734z"
-                            fill="#706d6e" />
-                        <path d="M104.868 104.868H0V0h104.868v104.868z" fill="#f1511b" />
-                        <path d="M220.654 104.868H115.788V0h104.866v104.868z" fill="#80cc28" />
-                        <path d="M104.865 220.695H0V115.828h104.865v104.867z" fill="#00adef" />
-                        <path d="M220.654 220.695H115.788V115.828h104.866v104.867z" fill="#fbbc09" />
-                    </svg>
-                    <a href="./assets/images/Microsoft Azure Fundamentals.pdf" target="_blank">
-                        Microsoft Azure Fundamentals
-                    </a>
-
-                </div>
-
-                <div id="certificatebox"
-                    class="flex items-center p-4 mb-4 darkcolor text-red-800 border-t-4 border-red-300 bg-red-50 dark:text-red-300 dark:border-red-800 rounded-full
-                    flex-wrap
-                    justify-center
-                    lg:text-2xl
-                    md:text-lg"
-                    role="alert">
-                    <svg class="my-2 mx-12" width="100px" height="120px" viewBox="0 -222.5 512 512"
-                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
-                        <path
-                            d="M221.034 43.303h33.832l-17.889-28.781-32.833 52.037h-14.942l39.935-62.508c1.736-2.525 4.63-4.051 7.84-4.051 3.104 0 5.998 1.473 7.682 3.946l40.093 62.613H269.81l-7.05-11.628h-34.253l-7.472-11.628zM376.251 54.93V.631h-12.68v59.614c0 1.631.631 3.21 1.841 4.42s2.841 1.894 4.63 1.894h57.825l7.472-11.628H376.25zm-209.78-9.734c12.313 0 22.31-9.944 22.31-22.256 0-12.313-9.997-22.31-22.31-22.31h-55.473V66.56h12.676v-54.3h41.956c5.893 0 10.628 4.789 10.628 10.682 0 5.892-4.735 10.68-10.628 10.68l-35.747-.052 37.851 32.99h18.416l-25.466-21.362h5.788zM32.97 66.559C14.77 66.56 0 51.827 0 33.622 0 15.416 14.77.632 32.97.632h38.32c18.204 0 32.963 14.784 32.963 32.99 0 18.205-14.759 32.937-32.964 32.937H32.97zm37.468-11.628c11.791 0 21.341-9.524 21.341-21.31 0-11.785-9.55-21.361-21.341-21.361h-36.62c-11.787 0-21.342 9.576-21.342 21.362 0 11.785 9.555 21.309 21.341 21.309h36.62zm240.78 11.628c-18.204 0-32.99-14.732-32.99-32.937 0-18.206 14.786-32.99 32.99-32.99h45.514l-7.42 11.628H312.06c-11.786 0-21.362 9.576-21.362 21.362 0 11.785 9.576 21.309 21.362 21.309h45.723l-7.472 11.628h-39.093zm155.06-11.628c-9.734 0-17.995-6.524-20.52-15.522h54.194l7.471-11.628h-61.665c2.525-8.945 10.786-15.521 20.52-15.521h37.2L511 .63h-45.565c-18.205 0-32.99 14.785-32.99 32.99 0 18.206 14.785 32.938 32.99 32.938h39.094L512 54.931h-45.723z"
-                            fill="#EA1B22" />
-                    </svg>
-                    <a href="./assets/images/Oracle eCertificate.pdf" target="_blank">
-                        Oracle Cloud Infrastructure Generative AI Certified Professional
-                    </a>
-
-                </div>
-
-                <!-- <div id="certificatebox"
-                    class="flex items-center p-4 border-t-4 darkcolor border-gray-300 bg-gray-50 dark:border-gray-600 text-2xl rounded-full"
-                    role="alert">
-                    <svg class="shrink-0 w-4 h-4 dark:text-gray-300 rounded-full" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-                    </svg>
-                    <div class="ms-3 text-sm font-medium text-gray-800 dark:text-gray-300">
-                        A simple dark alert with an <a href="#"
-                            class="font-semibold underline hover:text-gray-800 hover:no-underline dark:text-gray-300">example
-                            link</a>. Give it a click if you like.
-                    </div>
-                    <button type="button"
-                        class="ms-auto -mx-1.5 -my-1.5 bg-gray-50 text-gray-500 rounded-lg focus:ring-2 focus:ring-gray-400 p-1.5 hover:bg-gray-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white"
-                        data-dismiss-target="#alert-border-5" aria-label="Close">
-                        <span class="sr-only">Dismiss</span>
-                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 14 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                        </svg>
-                    </button>
-                </div> -->
-            </div>
-    </section>
-
-    <section id="Project" class=" h-auto">
-        <div class="mt-[3rem]
-        lg:my-25
-            md:my-15
-            sm:my-3">
-            <h1 class="headingnames font-lato justify-center flex fade-in  
-            lg:text-[4rem]  
-        sm:text-[2rem]" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                My Projects
-            </h1>
-        </div>
-        <div class="w-[90%] mx-auto my-16 h-[35rem] overflow-y-auto justify-center border-2 border-gray-700 shadow-lg shadow-black" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-            <div class="m-5 items-center grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <a href="https://github.com/ChiragJiwnani/Taskmanager">
-                    <div class="justify-center darkcolor rounded-2xl shadow-lg shadow-black w-full h-[15rem] hover:scale-105 ease-in-out duration-300 p-2">
-                        <img class="w-full h-[80%] rounded-xl" src="./assets/images/task manager.jpg" alt="Task Manager">
-                        <h3 class="my-3 text-center">Task Manager</h3>
-                    </div>
-                </a>
-                <a href="https://github.com/ChiragJiwnani/DataCraft---End-to-End-Data-Science-Project-Tool">
-                    <div class="justify-center darkcolor rounded-2xl shadow-lg shadow-black w-full h-[15rem] hover:scale-105 ease-in-out duration-300 p-2">
-                        <img class="w-full h-[80%] rounded-xl" src="./assets/images/DataCraft.jpg" alt="DataCraft">
-                        <h3 class="my-3 text-center">DataCraft - Data Science Project Tool</h3>
-                    </div>
-                </a>
-                <a href="https://github.com/ChiragJiwnani/IKSHA-AntiProcrastination_Specs">
-                    <div class="justify-center darkcolor rounded-2xl shadow-lg shadow-black w-full h-[15rem] hover:scale-105 ease-in-out duration-300 p-2">
-                        <img class="w-full h-[80%] rounded-xl" src="./assets/images/Iksha.png" alt="Iksha">
-                        <h3 class="my-3 text-center">Iksha - AI Procrastination Specs</h3>
-                    </div>
-                </a>
-                <a href="https://github.com/ChiragJiwnani/Custom-Recipe-Generator">
-                    <div class="justify-center darkcolor rounded-2xl shadow-lg shadow-black w-full h-[15rem] hover:scale-105 ease-in-out duration-300 p-2">
-                        <img class="w-full h-[80%] rounded-xl" src="./assets/images/recipe.png" alt="Custom Recipe Generator">
-                        <h3 class="my-3 text-center">Custom Recipe Generator</h3>
-                    </div>
-                </a>
-                <a href="https://github.com/ChiragJiwnani/Automatic-Fining-System">
-                    <div class="justify-center darkcolor rounded-2xl shadow-lg shadow-black w-full h-[15rem] hover:scale-105 ease-in-out duration-300 p-2">
-                        <img class="w-full h-[80%] rounded-xl" src="./assets/images/numberplate.jpg" alt="Realtime License Plate Detector">
-                        <h3 class="my-3 text-center">Realtime License Plate Detector</h3>
-                    </div>
-                </a>
-                <a href="https://github.com/ChiragJiwnani/News-Analysis">
-                    <div class="justify-center darkcolor rounded-2xl shadow-lg shadow-black w-full h-[15rem] hover:scale-105 ease-in-out duration-300 p-2">
-                        <img class="w-full h-[80%] rounded-xl" src="./assets/images/news.jpeg" alt="News Analysis">
-                        <h3 class="my-3 text-center">News Analysis</h3>
-                    </div>
-                </a>
-                <a href="https://github.com/ChiragJiwnani/Funngro-revamp">
-                    <div class="justify-center darkcolor rounded-2xl shadow-lg shadow-black w-full h-[15rem] hover:scale-105 ease-in-out duration-300 p-2">
-                        <img class="w-full h-[80%] rounded-xl" src="./assets/images/funngro.png" alt="Funngro">
-                        <h3 class="my-3 text-center">Funngro Website Revamp</h3>
-                    </div>
-                </a>
-                <a href="https://github.com/ChiragJiwnani/Workforce-Analytics-Employee-Shift-Analysis">
-                    <div class="justify-center darkcolor rounded-2xl shadow-lg shadow-black w-full h-[15rem] hover:scale-105 ease-in-out duration-300 p-2">
-                        <img class="w-full h-[80%] rounded-xl" src="./assets/images/workforce.jpg" alt="Workforce Analysis">
-                        <h3 class="my-3 text-center">Workforce Analysis</h3>
-                    </div>
-                </a>
-                <a href="https://chirags-youtube-clone.netlify.app">
-                    <div class="justify-center darkcolor rounded-2xl shadow-lg shadow-black w-full h-[15rem] hover:scale-105 ease-in-out duration-300 p-2">
-                        <img class="w-full h-[80%] rounded-xl" src="./assets/images/youtube.png" alt="YouTube Clone">
-                        <h3 class="my-3 text-center">YouTube Clone</h3>
-                    </div>
-                </a>
-                <a href="https://github.com/ChiragJiwnani/PrimeVideo_Dashboard">
-                    <div class="justify-center darkcolor rounded-2xl shadow-lg shadow-black w-full h-[15rem] hover:scale-105 ease-in-out duration-300 p-2">
-                        <img class="w-full h-[80%] rounded-xl" src="./assets/images/primevideo.png" alt="YouTube Clone">
-                        <h3 class="my-3 text-center">Prime Video DashBoard (PowerBI)</h3>
-                    </div>
-                </a>
-                <a href="https://github.com/ChiragJiwnani/Blinkit_Dashboard">
-                    <div class="justify-center darkcolor rounded-2xl shadow-lg shadow-black w-full h-[15rem] hover:scale-105 ease-in-out duration-300 p-2">
-                        <img class="w-full h-[80%] rounded-xl" src="./assets/images/blinkit.png" alt="YouTube Clone">
-                        <h3 class="my-3 text-center">Blinkit DashBoard (PowerBI)</h3>
-                    </div>
-                </a>
-            </div>
-        </div>
-        
-        <!-- <div class="flex relative justify-center self-center 
-                lg:mt-[6%] 
-                sm:mt-[20px]" data-aos="fade-up" data-aos-duration="1000"> -->
-
-            <!-- <button class="rainbowbtn flex rounded font-extrabold 
-        relative hover:scale-110 ease-in-out duration-300 group after:content-['']
-        lg: py-2 px-5 shadow shadow-lg shadow-black">
-                <a href="#Contact">Lets Work Together !!</a>
-
-            </button> -->
-        <!-- </div> -->
-        </div>
-        </div>
-    </section>
-
-    <section id="Contact" class=" h-auto w-[100%]">
-        <div class="
-        md: my-15
-            sm: my-3">
-            <h1 class="headingnames font-lato justify-center flex fade-in  
-            lg:text-[4rem]  
-        sm:text-[2rem]" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                Contact Me
-            </h1>
-        </div>
-        <div class="flex flex-wrap justify-evenly" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-            <div
-                class="flex flex-col mx-10 my-5 w-[35rem] darkcolor rounded-3xl p-6 shadow drop-shadow-sm shadow-black">
-
-                <h4 class="text-lg my-4">My Address:</h4>
-                <h1 class="text-2xl">Andheri West, Mumbai, Maharashtra</h1>
-                <hr class="border-slate-700">
-                <h4 class="text-lg my-4">Email:</h4>
-                <h1 class="text-2xl">chiragworks005@gmail.com</h1>
-                <hr class="border-slate-700">
-                <h4 class="text-lg my-4">Phone:</h4>
-                <h1 class="text-2xl">+91 8182831488</h1>
-                <hr class="border-slate-700">
-                <h4 class="text-lg my-4">Follow me</h4>
-                <ul class="mx-2 space-x-5 flex text-[#b0b2c3] ">
-                    <li class="p-2 rounded-md shadow drop-shadow-xl shadow-black">
-                        <a href="https://www.linkedin.com/in/chirag-jiwnani/" target="_blank">
-
-
-                            <svg class="w-7 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                <path fill="currentColor"
-                                    d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="p-2 rounded-md shadow drop-shadow-xl shadow-black">
-                        <a href="https://github.com/chiragjiwnani">
-                            <svg class="w-7 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
-                                <path fill="currentColor"
-                                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="p-2 rounded-md shadow drop-shadow-xl shadow-black">
-                        <a href="https://www.instagram.com/chirag.jiwnani/">
-                            <svg class="w-7 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                <path fill="currentColor"
-                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="p-2 rounded-md shadow drop-shadow-xl shadow-black">
-                        <a href="mailto:chiragworks005@gmail.com" target="_blank">
-                            <svg class="w-7 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path fill="currentColor"
-                                    d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="p-2 rounded-md shadow drop-shadow-xl shadow-black">
-                        <a href="https://www.behance.net/chiragjiwnani">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
-                                <path fill="currentColor"
-                                    d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z" />
-                            </svg>
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-            <div class="my-5 flex flex-col w-[25rem] h-auto">
-                <div class="rainbowbtn rounded-xl p-1 shadow-md shadow-black">
-                    <input class="input rounded-xl h-[10rem] w-[100%] p-6 " type="Message" placeholder="Message...">
-                </div>
-                <button class="">
-                    <div class="rainbowbtn m-6 w-30 h-10 p-2 rounded-xl font-extrabold shadow-lg shadow-black">
-                        Send Message
-                    </div>
-                </button>
-            </div>
-    </section>
-
-    <a href="#">
-
-        <button class="topbtn sticky h-12 w-12 rounded-full left-[100rem] bottom-8 z-99 my-6 mx-6">
-            top
-        </button>
-    </a>
-
-    <script src="dropdown.js"></script>
-    <script src="animation.js"></script>
-    <script src="typewriter.js"></script>
-    <script src="lightdark.js"></script>
-    <script src="skillcomponent.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-    <!-- <script src="../path/to/flowbite/dist/flowbite.bundle.js"></script> -->
-
-
+    <!-- Scripts -->
+    <script src="main.js"></script>
 </body>
-
 </html>
